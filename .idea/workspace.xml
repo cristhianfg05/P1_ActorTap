@@ -10,6 +10,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -40,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666099644125</updated>
-      <workItem from="1666099646334" duration="728000" />
+      <workItem from="1666099646334" duration="1697000" />
     </task>
     <servers />
   </component>
