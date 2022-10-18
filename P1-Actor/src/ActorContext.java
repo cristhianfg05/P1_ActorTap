@@ -10,15 +10,18 @@ public class ActorContext extends Thread{
 
     private ActorContext(){}
 
-    public ActorContext getInstance(){
-        if (actor == null)
+    public static ActorContext getInstance(){
+        if (actor == null){
             actor = new ActorContext();
+            map = new HashMap<String, ActorInterface>();
+        }
         return actor;
     }
 
-    public static ActorProxy spawnActor(String name,ActorInterface new_actor){
-        map.put(name, new_actor);
-        return (ActorProxy)map.get(name);
+    public static ActorProxy spawnActor(String name,ActorInterface newActor){
+        ActorProxy aux = new ActorProxy(newActor);
+        map.put(name, aux);
+        return aux;
     }
 
     public boolean lookup(String name){
