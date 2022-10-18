@@ -1,3 +1,3 @@
 public interface ActorInterface {
-    public void sendMessage(String message);
+    public void send(Message message);
 }
