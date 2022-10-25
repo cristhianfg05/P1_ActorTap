@@ -1,7 +1,9 @@
 public class Message {
 
-    ActorInterface reciever;
-    String msg;
+    private ActorInterface reciever;
+    private String msg;
+
+    private ActorInterface sender;
 
     public Message(ActorInterface actor, String msg) {
         this.reciever = actor;
@@ -29,5 +31,13 @@ public class Message {
         return "Message{" +
                 "msg='" + msg + '\'' +
                 '}';
+    }
+
+    public ActorInterface getSender() {
+        return sender;
+    }
+
+    public void setSender(ActorInterface sender) {
+        this.sender = sender;
     }
 }

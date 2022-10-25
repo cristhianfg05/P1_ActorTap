@@ -23,6 +23,7 @@ public class RingActor implements ActorInterface, Runnable{
     public void send(Message message) {
         ActorInterface aux = message.getReciever();
         aux.getQueueMsg().add(message);
+        message.setSender(this);
     }
 
     @Override
