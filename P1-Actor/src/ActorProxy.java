@@ -16,11 +16,15 @@ public class ActorProxy implements ActorInterface, Runnable {
         /**DESDE AQUI SE LLAMA AL SEND DE CADA ACTOR*/
         queueMsg.add(message);
         actor.send(message);
-        recieve(message);
+        if( ! (message.getReciever()  instanceof  ActorProxy)){
+            recieve(message);
+        }
+
     }
 
     private void recieve(Message m) {
         m.getReciever().send(new Message(this, m.getMsg()));
+        System.out.println("ESTO ES EL PROXY" + queueMsg);
     }
 
     @Override
