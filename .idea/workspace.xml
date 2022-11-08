@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInsult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/MessageInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

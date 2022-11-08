@@ -5,9 +5,8 @@ public class GetInsultMessage implements MessageInterface{
     private ActorInterface reciever;
 
 
-    public GetInsultMessage(ActorInterface actor, String msg) {
-        this.reciever = actor;
-        this.msg = msg;
+    public GetInsultMessage() {
+
     }
     @Override
     public ActorInterface getReciever() {
