@@ -23,7 +23,7 @@ public class ActorContext extends Thread{
         ActorProxy aux = new ActorProxy(newActor);
         new Thread(newActor).start();
         /**Almaceno el actor en el hashMap*/
-        map.put(name, aux);
+        map.put(name, newActor);
 
         /**Devuelvo el actorProxy (puede ser cualquier tipo de actor)**/
         return aux;

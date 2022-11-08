@@ -1,13 +1,10 @@
-import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class RingActor implements ActorInterface, Runnable{
 
     /**TODOS LOS ACTORES TIENEN SU COLA**/
-    private LinkedBlockingQueue<Message> queueMsg;
+    private LinkedBlockingQueue<MessageInterface> queueMsg;
     private RingActor nextActor;
 
     public RingActor (){
@@ -20,9 +17,9 @@ public class RingActor implements ActorInterface, Runnable{
     }
 
     @Override
-    public void send(Message message) {
+    public void send(MessageInterface message) {
         ActorInterface aux = message.getReciever();
-        aux.getQueueMsg().add(message);
+        aux.getQueueMsg().add((Message) message);
         message.setSender(this);
     }
 
@@ -37,8 +34,13 @@ public class RingActor implements ActorInterface, Runnable{
         }
     }
 
-    public Queue<Message> getQueueMsg() {
+    public Queue<MessageInterface> getQueueMsg() {
         return queueMsg;
+    }
+
+    @Override
+    public void recieve() {
+
     }
 
 }
