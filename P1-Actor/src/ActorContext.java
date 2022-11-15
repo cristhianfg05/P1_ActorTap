@@ -29,6 +29,17 @@ public class ActorContext extends Thread{
         return aux;
     }
 
+    public static ProxyClient spawnProxy(String name, ActorInterface newActor){
+        /**Creo un ProxyClient a traves del proxy que me ha llegado**/
+        ProxyClient aux = new ProxyClient(newActor);
+        new Thread(newActor).start();
+        /**Almaceno el actor en el hashMap*/
+        map.put(name, newActor);
+
+        /**Devuelvo el actorProxy (puede ser cualquier tipo de actor)**/
+        return aux;
+    }
+
     public boolean lookup(String name){
         return map.containsKey(name);
     }

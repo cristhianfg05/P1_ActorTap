@@ -37,4 +37,11 @@ public class AddInsultMessage implements MessageInterface{
     public void setSender(ActorInterface sender) {
         this.sender = sender;
     }
+
+    @Override
+    public String toString() {
+        return "AddInsultMessage{" +
+                "msg='" + msg + '\'' +
+                '}';
+    }
 }

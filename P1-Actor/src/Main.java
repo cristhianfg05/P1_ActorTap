@@ -31,8 +31,12 @@ public class Main {
         Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
 
         /**PARTE 2**/
-        String a = " o";
-        a.getBytes(StandardCharsets.UTF_8);
+        ProxyClient insult = ActorContext.spawnProxy("Insult", new InsultActor());
+        insult.send(new AddInsultMessage(insult, "HOLA"));
+        insult.send(new GetInsultMessage(insult, ""));
+        MessageInterface result = insult.recieve();
+        System.out.println(result.getMsg());
+
 
     }
 }

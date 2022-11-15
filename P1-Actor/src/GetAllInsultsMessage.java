@@ -4,8 +4,9 @@ public class GetAllInsultsMessage implements MessageInterface{
     private ActorInterface reciever;
 
 
-    public GetAllInsultsMessage() {
-
+    public GetAllInsultsMessage(ActorInterface actor, String msg) {
+        this.reciever = actor;
+        this.msg = msg;
     }
     @Override
     public ActorInterface getReciever() {

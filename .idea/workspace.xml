@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInsult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/AddInsultMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/AddInsultMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/deim/Documents/GitHub/P1_ActorTap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/deim/Documents/GitHub/P1_ActorTap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

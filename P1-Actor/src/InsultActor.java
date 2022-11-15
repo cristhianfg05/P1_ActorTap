@@ -7,11 +7,17 @@ public class InsultActor implements  ActorInterface, Runnable{
 
     private LinkedBlockingQueue<MessageInterface> queueInsultMsg;
     private ArrayList<MessageInterface> InsultList;
+
+    public InsultActor(){
+        queueInsultMsg = new LinkedBlockingQueue<>();
+        InsultList = new ArrayList<>();
+    }
     @Override
     public void send(MessageInterface message) {
         ActorInterface aux = message.getReciever();
-        aux.getQueueMsg().add((Message) message);
         message.setSender(this);
+        message.setReciever(aux);
+        aux.getQueueMsg().add(message);
     }
 
     @Override
@@ -19,25 +25,24 @@ public class InsultActor implements  ActorInterface, Runnable{
         return this.queueInsultMsg;
     }
 
-    @Override
-    public void recieve() {
-
-    }
-
 
     @Override
     public void run() {
         while(true){
             try {
-                if(this.queueInsultMsg.peek() instanceof Message){
+                /**PREGUNTAR A PEDRO POR EL SWITCH**/
+                MessageInterface aux = queueInsultMsg.take();
+                if(aux instanceof Message){
                     System.out.println(this.queueInsultMsg.take());
-                }else if(this.queueInsultMsg.peek() instanceof GetInsultMessage){
+                }else if(aux instanceof GetInsultMessage){
                     int rnd = new Random().nextInt(InsultList.size());
-                    /**AUN POR DECIDIR QUE HAY QUE HACER**/
-                }else if(this.queueInsultMsg.peek() instanceof AddInsultMessage){
+                    aux.getSender().send(new Message(null, InsultList.get(rnd).getMsg()));
+                }else if(aux instanceof AddInsultMessage){
                     InsultList.add(this.queueInsultMsg.take());
                 }else{
-                    /**GetAllinsults**/
+                    for (MessageInterface m : InsultList) {
+                        send(m);
+                    }
                 }
 
             } catch (InterruptedException e) {

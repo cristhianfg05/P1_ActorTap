@@ -2,7 +2,8 @@ import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ActorProxy implements ActorInterface, Runnable {
-
+    /**EL ACTOR PROXY HACE DE CAMINO HACIA LOS OTROS ACTORES**/
+    /**IMPIDIENDO QUE EL USUARIO TRABAJE CON LOS ACTORES DE MANERA DIRECTA**/
     private ActorInterface actor;
     private LinkedBlockingQueue<Message> queueMsg;
 
@@ -13,25 +14,14 @@ public class ActorProxy implements ActorInterface, Runnable {
 
     @Override
     public void send(MessageInterface message) {
-        /**DESDE AQUI SE LLAMA AL SEND DE CADA ACTOR*/
-        queueMsg.add((Message) message);
+        /**DESDE AQUI SE LLAMA AL SEND DE CADA ACTOR**/
         actor.send(message);
-
-
     }
 
-    private void recieve(Message m) {
-
-    }
 
     @Override
     public Queue<MessageInterface> getQueueMsg() {
        return actor.getQueueMsg();
-    }
-
-    @Override
-    public void recieve() {
-
     }
 
     @Override

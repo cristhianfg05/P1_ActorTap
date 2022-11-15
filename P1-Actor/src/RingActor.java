@@ -18,9 +18,11 @@ public class RingActor implements ActorInterface, Runnable{
 
     @Override
     public void send(MessageInterface message) {
+        /**FALTA CORREGIR QUE CADA RING SOLO ENVIE MENSAJE AL SIGUIENTE RING ACTOR**/
         ActorInterface aux = message.getReciever();
-        aux.getQueueMsg().add((Message) message);
         message.setSender(this);
+        message.setReciever(aux);
+        aux.getQueueMsg().add(message);
     }
 
     @Override
@@ -38,9 +40,5 @@ public class RingActor implements ActorInterface, Runnable{
         return queueMsg;
     }
 
-    @Override
-    public void recieve() {
-
-    }
 
 }
