@@ -19,7 +19,7 @@ public class ProxyClient implements ActorInterface, Runnable{
     }
 
     @Override
-    public Queue<MessageInterface> getQueueMsg() {
+    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
         return queueMsg;
     }
 

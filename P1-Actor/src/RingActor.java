@@ -12,6 +12,11 @@ public class RingActor implements ActorInterface, Runnable{
         nextActor = null;
     }
 
+    public RingActor (RingActor next){
+        queueMsg = new LinkedBlockingQueue<>();
+        nextActor = next;
+    }
+
     public void linkActor(RingActor actor){
         nextActor = actor;
     }
@@ -36,7 +41,7 @@ public class RingActor implements ActorInterface, Runnable{
         }
     }
 
-    public Queue<MessageInterface> getQueueMsg() {
+    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
         return queueMsg;
     }
 

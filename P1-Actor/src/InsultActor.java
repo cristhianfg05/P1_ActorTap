@@ -21,7 +21,7 @@ public class InsultActor implements  ActorInterface, Runnable{
     }
 
     @Override
-    public Queue<MessageInterface> getQueueMsg() {
+    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
         return this.queueInsultMsg;
     }
 

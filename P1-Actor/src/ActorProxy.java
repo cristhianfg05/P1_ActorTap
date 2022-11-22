@@ -20,7 +20,7 @@ public class ActorProxy implements ActorInterface, Runnable {
 
 
     @Override
-    public Queue<MessageInterface> getQueueMsg() {
+    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
        return actor.getQueueMsg();
     }
 
