@@ -47,7 +47,7 @@ public class Main {
         ActorContext ActorED = ActorContext.getInstance();
         ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
         ActorProxy reciever = ActorContext.spawnActor("name1",new EncryptionDecorator(new FirewallDecorator(new RingActor())));
-        sender.send(new Message(reciever, "hola que tal"));
+        sender.send(new Message(reciever, "hhhhhhhhhhollllaaaaaaa hghgfh"));
 
     }
 }

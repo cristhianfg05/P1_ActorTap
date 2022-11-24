@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" afterDir="false" />
-    </list>
+    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666099644125</updated>
       <workItem from="1666099646334" duration="1697000" />
+      <workItem from="1669306120501" duration="3309000" />
     </task>
     <servers />
   </component>

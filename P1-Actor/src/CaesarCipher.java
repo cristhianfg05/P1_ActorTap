@@ -1,38 +1,59 @@
 public class CaesarCipher {
-    public static final String alpha = "abcdefghijklmnopqrstuvwxyz";
+    /**Constant variable where all the english alphabet is**/
+    public static final String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
+    /**Method where we send a message and a shift key that encrypts in Caesar, this will return an encrypted message**/
     public static String encrypt(String message, int shiftKey) {
+        //Message in lowercase
         message = message.toLowerCase();
+
+        //We create where the encrypted text will be
         String cipherText = "";
-        for (int ii = 0; ii < message.length(); ii++) {
-            if(message.charAt(ii) == ' '){
+
+        //We go through every character in the string message
+        for (char c: message.toCharArray()) {
+            //If the character is a whitespace we add it to the encrypted message and move to the next character
+            if(c == ' '){
                 cipherText += ' ';
                 continue;
             }
-            int charPosition = alpha.indexOf(message.charAt(ii));
-
+            //We calculate the position in the alphabet of the character
+            int charPosition = alphabet.indexOf(c);
+            //We calculate the new value for the next character
             int keyVal = (shiftKey + charPosition) % 26;
+            //We get the character that will override the original one
+            char replaceVal = alphabet.charAt(keyVal);
 
-            char replaceVal = alpha.charAt(keyVal);
+            //We add it to the text
             cipherText += replaceVal;
         }
         return cipherText;
     }
 
+    /**We send and encrypted text and this function will decrypt it, giving the same shiftkey as the encrypted one**/
     public static String decrypt(String cipherText, int shiftKey) {
+        //Cypher text in lowercase
         cipherText = cipherText.toLowerCase();
+        //We create the new message where the decrypted message will be
         String message = "";
-        for (int ii = 0; ii < cipherText.length(); ii++) {
-            if(cipherText.charAt(ii) == ' '){
+        //We iterate over the text
+        for (char c : cipherText.toCharArray()) {
+            //If it has whitespaces we add them to the message and continue
+            if(c == ' '){
                 message += ' ';
                 continue;
             }
-            int charPosition = alpha.indexOf(cipherText.charAt(ii));
+            //We calculate the position in the alphabet of the character
+            int charPosition = alphabet.indexOf(c);
+            //We calculate the new value of the next character
             int keyVal = (charPosition - shiftKey) % 26;
+            //If the keyVal is negative we just convert it to a positive int
             if (keyVal < 0) {
-                keyVal = alpha.length() + keyVal;
+                keyVal = alphabet.length() + keyVal;
             }
-            char replaceVal = alpha.charAt(keyVal);
+            //We get the next character that will replace the one in the encrypted message
+            char replaceVal = alphabet.charAt(keyVal);
+            //Add it
             message += replaceVal;
         }
         return message;
