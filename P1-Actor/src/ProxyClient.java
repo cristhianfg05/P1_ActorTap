@@ -14,6 +14,7 @@ public class ProxyClient implements ActorInterface, Runnable{
 
     public void send(MessageInterface message){
         ActorInterface aux = message.getReciever();
+        message.setSender(this);
         message.setReciever(aux);
         aux.getQueueMsg().add(message);
     }

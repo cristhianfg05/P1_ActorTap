@@ -9,6 +9,11 @@ public class Message implements MessageInterface{
         this.reciever = actor;
         this.msg = msg;
     }
+    public Message(ActorInterface sender,ActorInterface reciever, String msg) {
+        this.reciever = reciever;
+        this.msg = msg;
+        this.sender = sender;
+    }
 
     public ActorInterface getReciever() {
         return reciever;
