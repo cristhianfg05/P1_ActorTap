@@ -46,12 +46,12 @@ public class Main {
         /**PARTE 3**/
         ActorContext ActorED = ActorContext.getInstance();
         ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
-        ActorProxy reciever = ActorContext.spawnActor("name1",new EncryptionDecorator(new FirewallDecorator(new RingActor())));
-        ProxyClient proxy = ActorContext.spawnProxy("Insult", new FirewallDecorator(new RingActor()));
+        ActorProxy target = ActorContext.spawnActor("name1",new EncryptionDecorator(new FirewallDecorator (new RingActor())));
+        ProxyClient proxy = ActorContext.spawnProxy("name2", new FirewallDecorator(new RingActor()));
 
-        //sender.send(new Message(sender,reciever, "hola que tal"));
-        proxy.send(new Message(reciever,"soy un proxy muy malo"));
-        //sender.send(new Message(sender,reciever, "muy bien"));
+        sender.send(new Message(sender,target, "hola que tal"));
+        proxy.send(new Message(target,"soy un proxy muy malo"));
+        //sender.send(new Message(sender,target, "muy bien"));
 
     }
 }

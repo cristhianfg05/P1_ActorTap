@@ -23,7 +23,7 @@ public class ActorDecorator implements ActorInterface{
             try {
                 MessageInterface aux = actor.getQueueMsg().take();
                 aux.setMsg(CaesarCipher.decrypt(aux.getMsg(), 1));
-                System.out.println(aux.getMsg());
+                System.out.println("Decrypted message: " + aux.getMsg());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

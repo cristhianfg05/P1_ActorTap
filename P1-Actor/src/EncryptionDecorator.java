@@ -8,7 +8,7 @@ public class EncryptionDecorator extends  ActorDecorator{
     @Override
     public void send(MessageInterface message){
         message.setMsg(CaesarCipher.encrypt(message.getMsg(), 1));
-        System.out.println("Mensaje encriptado: " + message.getMsg());
+        System.out.println("Encrypted message: " + message.getMsg());
         super.send(message);
     }
 
