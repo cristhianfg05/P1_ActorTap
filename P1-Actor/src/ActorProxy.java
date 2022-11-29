@@ -25,6 +25,11 @@ public class ActorProxy implements ActorInterface, Runnable {
     }
 
     @Override
+    public void process(MessageInterface message) {
+
+    }
+
+    @Override
     public void run() {
 
     }

@@ -31,10 +31,16 @@ public class RingActor implements ActorInterface, Runnable{
     }
 
     @Override
+    public void process(MessageInterface message) {
+       System.out.println(message);
+    }
+
+    @Override
     public void run() {
         while(true){
             try {
-                System.out.println(this.queueMsg.take());
+                System.out.println("LLego el ring run");
+                process(this.queueMsg.take());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

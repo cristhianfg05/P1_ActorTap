@@ -13,11 +13,11 @@ public class ProxyClient implements ActorInterface, Runnable{
     }
 
     public void send(MessageInterface message){
-        /*ActorInterface aux = message.getReciever();
+        ActorInterface aux = message.getReciever();
         message.setSender(this);
         message.setReciever(aux);
-        aux.getQueueMsg().add(message);
-        */
+        //aux.getQueueMsg().add(message);
+
         actor.send(message);
     }
 
@@ -31,7 +31,9 @@ public class ProxyClient implements ActorInterface, Runnable{
     }
 
 
+    public void process(MessageInterface message){
 
+    }
     @Override
     public void run() {
 

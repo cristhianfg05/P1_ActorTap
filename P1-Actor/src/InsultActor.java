@@ -27,27 +27,34 @@ public class InsultActor implements  ActorInterface, Runnable{
 
 
     @Override
+    public void process(MessageInterface message) throws InterruptedException {
+        if(message instanceof Message){
+            System.out.println(this.queueInsultMsg.take());
+        }else if(message instanceof GetInsultMessage){
+            int rnd = new Random().nextInt(InsultList.size());
+            message.getSender().send(new Message(null, InsultList.get(rnd).getMsg()));
+        }else if(message instanceof AddInsultMessage){
+            InsultList.add(this.queueInsultMsg.take());
+        }else{
+            for (MessageInterface m : InsultList) {
+                send(m);
+            }
+        }
+    }
+
+    @Override
     public void run() {
         while(true){
-            try {
-                /**PREGUNTAR A PEDRO POR EL SWITCH**/
-                MessageInterface aux = queueInsultMsg.take();
-                if(aux instanceof Message){
-                    System.out.println(this.queueInsultMsg.take());
-                }else if(aux instanceof GetInsultMessage){
-                    int rnd = new Random().nextInt(InsultList.size());
-                    aux.getSender().send(new Message(null, InsultList.get(rnd).getMsg()));
-                }else if(aux instanceof AddInsultMessage){
-                    InsultList.add(this.queueInsultMsg.take());
-                }else{
-                    for (MessageInterface m : InsultList) {
-                        send(m);
-                    }
-                }
 
+                /**PREGUNTAR A PEDRO POR EL SWITCH**/
+            MessageInterface aux = null;
+            try {
+                aux = queueInsultMsg.take();
+                process(aux);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
         }
     }
 }

@@ -17,16 +17,20 @@ public class ActorDecorator implements ActorInterface{
         return actor.getQueueMsg();
     }
 
+    public void process(MessageInterface message){
+
+    }
+
     @Override
     public void run() {
         while(true){
             try {
                 MessageInterface aux = actor.getQueueMsg().take();
-                aux.setMsg(CaesarCipher.decrypt(aux.getMsg(), 1));
-                System.out.println("Decrypted message: " + aux.getMsg());
+                //process(aux);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
+
     }
 }

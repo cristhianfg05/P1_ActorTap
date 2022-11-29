@@ -5,6 +5,8 @@ public class Message implements MessageInterface{
 
     private ActorInterface sender;
 
+
+    public Message(){}
     public Message(ActorInterface actor, String msg) {
         this.reciever = actor;
         this.msg = msg;

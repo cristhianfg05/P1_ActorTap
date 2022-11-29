@@ -7,7 +7,7 @@ public class FirewallDecorator extends ActorDecorator{
     public void send (MessageInterface message){
         System.out.println("FirewallDecorator send");
 
-        if (!ProxyClient.class.isInstance(message.getSender())){
+        if (!(message.getSender() instanceof ProxyClient)){
             System.out.println("No soy proxy");
             super.send(message);
         } else {
