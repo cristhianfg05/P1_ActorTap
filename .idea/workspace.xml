@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +80,36 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/P1-Actor/src/Main.java</url>
+          <line>57</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/P1-Actor/src/Main.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/P1-Actor/src/Main.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/P1-Actor/src/Main.java</url>
+          <line>51</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="EncryptionDecorator" memberName="actor" />
