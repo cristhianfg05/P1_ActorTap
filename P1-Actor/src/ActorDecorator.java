@@ -18,18 +18,10 @@ public class ActorDecorator implements ActorInterface{
     }
 
     public void process(MessageInterface message){
-        System.out.println(message);
     }
 
     @Override
     public void run() {
-        while(true){
-            try {
-                MessageInterface aux = actor.getQueueMsg().take();
-                process(aux);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
+
     }
 }
