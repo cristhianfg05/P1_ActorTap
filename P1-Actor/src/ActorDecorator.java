@@ -18,7 +18,7 @@ public class ActorDecorator implements ActorInterface{
     }
 
     public void process(MessageInterface message){
-
+        System.out.println(message);
     }
 
     @Override
@@ -26,11 +26,10 @@ public class ActorDecorator implements ActorInterface{
         while(true){
             try {
                 MessageInterface aux = actor.getQueueMsg().take();
-                //process(aux);
+                process(aux);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-
     }
 }
