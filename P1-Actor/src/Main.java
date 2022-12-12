@@ -58,6 +58,15 @@ public class Main {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         lambaDecorator.send(new Message(target,"predicado"));
 
+        ActorProxy Ring1 = ActorContext.spawnActor("Sender",new RingActor());
+        ActorProxy Ring2 = ActorContext.spawnActor("Sender",new RingActor());
+        ActorProxy Ring3 = ActorContext.spawnActor("Sender",new RingActor());
+        ActorProxy Ring4 = ActorContext.spawnActor("Sender",new RingActor());
+        ActorProxy Ring5 = ActorContext.spawnActor("Sender",new RingActor());
+
+        
+
+
 
 
 
