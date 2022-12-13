@@ -1,10 +1,11 @@
 
 import java.util.Queue;
 
-public class EncryptionDecorator extends  ActorDecorator{
+public class EncryptionDecorator extends  RingActor{
 
-    public EncryptionDecorator(ActorInterface actor) {
-        super(actor);
+
+    public EncryptionDecorator(RingActor actor) {
+        super();
     }
     @Override
     public void send(MessageInterface message){
@@ -14,8 +15,11 @@ public class EncryptionDecorator extends  ActorDecorator{
     }
 
     // Se llama desde el run
+   @Override
     public void process(MessageInterface message){
+        System.out.println("Recibo el mensajito.");
         message.setMsg(CaesarCipher.decrypt(message.getMsg(), 1));
+        super.process(message);
         System.out.println("Decrypted message: " + message.getMsg());
     }
 }
