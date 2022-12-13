@@ -15,7 +15,8 @@ public class FirewallDecorator extends ActorDecorator{
         }
     }
 
+    @Override
     public void process (MessageInterface message){
-        System.out.println(message.getMsg());
+        super.process(message);
     }
 }

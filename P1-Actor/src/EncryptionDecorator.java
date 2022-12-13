@@ -13,7 +13,7 @@ public class EncryptionDecorator extends  ActorDecorator{
         super.send(message);
     }
 
-    // Se llama desde el run
+    @Override
     public void process(MessageInterface message){
         message.setMsg(CaesarCipher.decrypt(message.getMsg(), 1));
         System.out.println("Decrypted message: " + message.getMsg());
