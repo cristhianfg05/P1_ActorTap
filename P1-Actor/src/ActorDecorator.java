@@ -22,6 +22,13 @@ public class ActorDecorator implements ActorInterface{
 
     @Override
     public void run() {
-
+        while(true){
+            try {
+                System.out.println("LLego el Actor decorator run");
+                process(actor.getQueueMsg().take());
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

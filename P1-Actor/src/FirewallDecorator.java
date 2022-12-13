@@ -14,4 +14,8 @@ public class FirewallDecorator extends ActorDecorator{
             System.out.println("El proxy de aqui no pasa");
         }
     }
+
+    public void process (MessageInterface message){
+        System.out.println(message.getMsg());
+    }
 }
