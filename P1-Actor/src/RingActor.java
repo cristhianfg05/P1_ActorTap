@@ -24,14 +24,10 @@ public class RingActor implements ActorInterface, Runnable{
     @Override
     public void send(MessageInterface message) {
         /**FALTA CORREGIR QUE CADA RING SOLO ENVIE MENSAJE AL SIGUIENTE RING ACTOR**/
-        if(this.nextActor != null){
-            message.setSender(this);
-            message.setReciever(this.nextActor);
-            this.nextActor.getQueueMsg().add(message);
-            this.nextActor.send(message);
-        }else
-            System.out.println("NO HAY MAS ACTORES ENCADENADOS");
-
+        ActorInterface aux = message.getReciever();
+        message.setSender(this);
+        message.setReciever(aux);
+        aux.getQueueMsg().add(message);
     }
 
     @Override
@@ -43,10 +39,8 @@ public class RingActor implements ActorInterface, Runnable{
     public void run() {
         while(true){
             try {
-                MessageInterface msg = this.queueMsg.take();
-                if(!(msg instanceof QuitMessage))
-                    process(this.queueMsg.take());
-                else break;
+                System.out.println("LLego el ring run");
+                process(this.queueMsg.take());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
