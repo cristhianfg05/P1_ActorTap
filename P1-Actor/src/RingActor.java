@@ -34,7 +34,7 @@ public class RingActor implements ActorInterface, Runnable{
 
     }
 
-
+    @Override
     public void process(MessageInterface message) {
        System.out.println(message);
     }
@@ -45,7 +45,7 @@ public class RingActor implements ActorInterface, Runnable{
             try {
                 MessageInterface msg = this.queueMsg.take();
                 if(!(msg instanceof QuitMessage))
-                    process(msg);
+                    process(this.queueMsg.take());
                 else break;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);

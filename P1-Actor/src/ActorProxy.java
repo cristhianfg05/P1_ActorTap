@@ -24,7 +24,7 @@ public class ActorProxy implements ActorInterface, Runnable {
        return actor.getQueueMsg();
     }
 
-
+    @Override
     public void process(MessageInterface message) {
 
     }

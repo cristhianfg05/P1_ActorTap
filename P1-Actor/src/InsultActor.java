@@ -26,7 +26,7 @@ public class InsultActor implements  ActorInterface, Runnable{
     }
 
 
-
+    @Override
     public void process(MessageInterface message) throws InterruptedException {
         if(message instanceof Message){
             System.out.println(this.queueInsultMsg.take());

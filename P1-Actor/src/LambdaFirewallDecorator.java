@@ -5,12 +5,12 @@ import java.util.Collections;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class LambdaFirewallDecorator extends RingActor{
+public class LambdaFirewallDecorator extends ActorDecorator {
 
     /**It will get a predicate through constructor that we will use after in order to send the message**/
     List<Predicate<MessageInterface>> predicate = new ArrayList<>();
 
-    public LambdaFirewallDecorator(RingActor actor, Predicate<MessageInterface> predicate) {
+    public LambdaFirewallDecorator(ActorInterface actor, Predicate<MessageInterface> predicate) {
         super(actor);
         this.predicate.add(predicate);
     }
