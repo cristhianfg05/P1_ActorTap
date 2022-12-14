@@ -48,11 +48,13 @@ public class Main {
 
         ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
         ActorProxy target = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor())); // new EncryptionDecorator()
-        ActorProxy target2 = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor()));
-        ProxyClient proxy = ActorContext.spawnProxy("name2", new FirewallDecorator(new RingActor()));
-        ActorProxy lambaDecorator = ActorContext.spawnActor("lambaDecorator", new LambdaFirewallDecorator(new RingActor(), x -> x.getMsg() != null ));
+        ActorProxy target1 = ActorContext.spawnActor("name3",new EncryptionDecorator(new FirewallDecorator (new RingActor())));
+        //ActorProxy target2 = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor()));
+        //ProxyClient proxy = ActorContext.spawnProxy("name2", new FirewallDecorator(new RingActor()));
+        //ActorProxy lambaDecorator = ActorContext.spawnActor("lambaDecorator", new LambdaFirewallDecorator(new RingActor(), x -> x.getMsg() != null ));
 
         sender.send(new Message(sender,target, "hola que tal"));
+        sender.send(new Message(sender,target1, "hola que tal dos"));
         //proxy.send(new Message(target,"soy un proxy muy malo"));
         //System.out.println("Ahora el lambda enviara un mensaje: ");
 

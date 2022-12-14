@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/FirewallDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/FirewallDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +62,7 @@
       <workItem from="1666099646334" duration="1697000" />
       <workItem from="1669306120501" duration="5709000" />
       <workItem from="1669365413981" duration="3404000" />
+      <workItem from="1671036082760" duration="4127000" />
     </task>
     <servers />
   </component>

@@ -7,16 +7,16 @@ public class FirewallDecorator extends ActorDecorator{
     public void send (MessageInterface message){
         System.out.println("FirewallDecorator send");
 
-        if (!(message.getSender() instanceof ProxyClient)){
+        if (message.getSender() instanceof ProxyClient){
+            System.out.println("El proxy de aqui no pasa");
+        } else {
             System.out.println("No soy proxy");
             super.send(message);
-        } else {
-            System.out.println("El proxy de aqui no pasa");
         }
     }
 
     @Override
-    public void process (MessageInterface message){
-        super.process(message);
+    public void process (MessageInterface message) throws InterruptedException {
+        actor.process(message);
     }
 }

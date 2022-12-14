@@ -33,7 +33,7 @@ public class RingActor implements ActorInterface, Runnable{
     @Override
     public void process(MessageInterface message) {
         System.out.println("Process Ring");
-        System.out.println(message);
+        System.out.println(message.getMsg());
     }
 
     @Override

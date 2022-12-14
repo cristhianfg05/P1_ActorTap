@@ -17,14 +17,14 @@ public class ActorDecorator implements ActorInterface{
         return actor.getQueueMsg();
     }
 
-    public void process(MessageInterface message){
+    public void process(MessageInterface message) throws InterruptedException {
+        System.out.println("Process del actordecorator");
     }
 
     @Override
     public void run() {
         while(true){
             try {
-                System.out.println("LLego el Actor decorator run");
                 process(actor.getQueueMsg().take());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
