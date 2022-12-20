@@ -6,42 +6,43 @@ public class RingActor implements ActorInterface, Runnable{
     /**TODOS LOS ACTORES TIENEN SU COLA**/
     private LinkedBlockingQueue<MessageInterface> queueMsg;
     private RingActor nextActor;
+    private int num_vueltas;
 
     public RingActor (){
         queueMsg = new LinkedBlockingQueue<>();
         nextActor = null;
+        this.num_vueltas = 0;
     }
-
-    public RingActor (RingActor next){
-        queueMsg = new LinkedBlockingQueue<>();
-        nextActor = next;
-    }
-
     public void linkActor(RingActor actor){
         nextActor = actor;
     }
 
     @Override
     public void send(MessageInterface message) {
-        /**FALTA CORREGIR QUE CADA RING SOLO ENVIE MENSAJE AL SIGUIENTE RING ACTOR**/
-        ActorInterface aux = message.getReciever();
-        message.setSender(this);
-        message.setReciever(aux);
-        aux.getQueueMsg().add(message);
+
+        message.setSender(message.getSender());
+        message.setReciever(this);
+        this.queueMsg.add(message);
+        num_vueltas++;
+        if(this.nextActor != null && this.nextActor.num_vueltas < 100){
+            this.nextActor.send(message);
+        }
     }
 
     @Override
     public void process(MessageInterface message) {
-        System.out.println("Process Ring");
-        System.out.println(message.getMsg());
+        //System.out.println("Process Ring");
+        System.out.println(message);
     }
 
     @Override
     public void run() {
         while(true){
             try {
-                System.out.println("LLego el ring run");
-                process(this.queueMsg.take());
+                MessageInterface aux = this.queueMsg.take();
+                if(aux instanceof Message)
+                    process(aux);
+                else break;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

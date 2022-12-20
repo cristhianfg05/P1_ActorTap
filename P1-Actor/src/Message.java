@@ -8,7 +8,7 @@ public class Message implements MessageInterface{
 
     public Message(){}
     public Message(ActorInterface actor, String msg) {
-        this.reciever = actor;
+        this.sender = actor;
         this.msg = msg;
     }
     public Message(ActorInterface sender,ActorInterface reciever, String msg) {
@@ -35,9 +35,7 @@ public class Message implements MessageInterface{
 
     @Override
     public String toString() {
-        return "Message{" +
-                "msg='" + msg + '\'' +
-                '}';
+        return "El mensaje fue enviado por" + this.sender + "\nMSG: "+this.msg;
     }
 
     public ActorInterface getSender() {

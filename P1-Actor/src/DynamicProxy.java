@@ -32,11 +32,6 @@ public class DynamicProxy implements InvocationHandler {
             System.err.println(e.getMessage());
         } finally {
             return invocationResult;
-
         }
-    }
-
-    public void intercept(Class intercepted_class, ActorInterface actor){
-        return invoke(actor, ,intercepted_class);
     }
 }

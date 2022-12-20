@@ -18,7 +18,9 @@ public class ActorProxy implements ActorInterface, Runnable {
         actor.send(message);
     }
 
-
+    public RingActor getRingActor(){
+        return (RingActor) this.actor;
+    }
     @Override
     public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
        return actor.getQueueMsg();

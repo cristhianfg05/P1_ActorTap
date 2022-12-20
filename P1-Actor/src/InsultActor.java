@@ -14,10 +14,9 @@ public class InsultActor implements  ActorInterface, Runnable{
     }
     @Override
     public void send(MessageInterface message) {
-        ActorInterface aux = message.getReciever();
-        message.setSender(this);
-        message.setReciever(aux);
-        aux.getQueueMsg().add(message);
+        message.setSender(message.getSender());
+        message.setReciever(this);
+        this.getQueueMsg().add(message);
     }
 
     @Override
@@ -25,7 +24,9 @@ public class InsultActor implements  ActorInterface, Runnable{
         return this.queueInsultMsg;
     }
 
-
+    public ArrayList getInsultList(){
+        return this.InsultList;
+    }
     @Override
     public void process(MessageInterface message) throws InterruptedException {
         if(message instanceof Message){

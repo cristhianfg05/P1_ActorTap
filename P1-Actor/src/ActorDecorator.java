@@ -19,6 +19,7 @@ public class ActorDecorator implements ActorInterface{
 
     public void process(MessageInterface message) throws InterruptedException {
         System.out.println("Process del actordecorator");
+        actor.process(message);
     }
 
     @Override
