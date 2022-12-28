@@ -8,7 +8,7 @@ public class InsultService implements ActorInterface {
         actor = null;
     }
     public String getInsult(){
-        int x = new Random().nextInt(actor.getInsultList().size())
+        int x = new Random().nextInt(actor.getInsultList().size());
         return actor.getInsultList().get(x).toString();
     }
     public List getAllInsults(){
