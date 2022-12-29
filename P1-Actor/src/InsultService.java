@@ -4,7 +4,13 @@ import java.util.Random;
 
 
 public class InsultService implements InsultServiceIF {
+    private List<MessageInterface> insults;
+    private Random random;
 
+    public InsultService(){
+        this.insults = new ArrayList<>();
+        random = new Random();
+    }
     @Override
     public void addInsult(MessageInterface insult) {
         insults.add(insult);

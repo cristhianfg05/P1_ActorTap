@@ -83,7 +83,8 @@ public class Main {
                                                                         new DynamicProxy(new InsultService()));
         insulter.addInsult(new Message(null,"stupid"));
         System.out.println(insulter.getInsult());
-        InsultService insulter = DynamicProxy.intercept(new InsultService(), actor);
+
+        //InsultService insulter = DynamicProxy.intercept(new InsultService(), actor);
 
     }
 }
