@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/QuitMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" afterDir="false" />
-    </list>
+    <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/deim/Documents/GitHub/P1_ActorTap"
+    "last_opened_file_path": "C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master"
   }
 }]]></component>
   <component name="RunManager">
@@ -81,6 +65,8 @@
       <workItem from="1671036082760" duration="4127000" />
       <workItem from="1671115921836" duration="4134000" />
       <workItem from="1671120117030" duration="2396000" />
+      <workItem from="1672224557031" duration="833000" />
+      <workItem from="1672301250434" duration="1615000" />
     </task>
     <servers />
   </component>

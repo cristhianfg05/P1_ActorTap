@@ -1,40 +1,30 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.LinkedBlockingQueue;
 
-public class InsultService implements ActorInterface {
-    InsultActor actor;
+
+public class InsultService implements InsultServiceIF {
+    private List<MessageInterface> insults;
+    private Random random;
+
     public InsultService(){
-        actor = null;
-    }
-    public String getInsult(){
-        int x = new Random().nextInt(actor.getInsultList().size())
-        return actor.getInsultList().get(x).toString();
-    }
-    public List getAllInsults(){
-        return null;
-    }
-    public void addInsult(MessageInterface insult){
-
+        this.insults = new ArrayList<>();
+        random = new Random();
     }
 
     @Override
-    public void send(MessageInterface message) {
-
+    public void addInsult(MessageInterface insult) {
+        insults.add(insult);
     }
 
     @Override
-    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
-        return null;
+    public MessageInterface getInsult() {
+        int index = random.nextInt(insults.size());
+        return insults.get(index);
     }
 
     @Override
-    public void process(MessageInterface message) throws InterruptedException {
-
-    }
-
-    @Override
-    public void run() {
-
+    public List getAllInsults() {
+        return insults;
     }
 }

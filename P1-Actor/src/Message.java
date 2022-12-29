@@ -35,7 +35,7 @@ public class Message implements MessageInterface{
 
     @Override
     public String toString() {
-        return "El mensaje fue enviado por" + this.sender + "\nMSG: "+this.msg;
+        return "El mensaje fue enviado por " + this.sender + "\nMSG: "+this.msg;
     }
 
     public ActorInterface getSender() {

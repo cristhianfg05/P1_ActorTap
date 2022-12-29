@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class DynamicProxy implements InvocationHandler {
-    private Object target = null;
+    private Object target;
     public static Object newInstance(Object target){
 
         Class targetClass = target.getClass();
@@ -13,7 +13,7 @@ public class DynamicProxy implements InvocationHandler {
                 new DynamicProxy(target));
     }
 
-    private DynamicProxy (Object target){
+    public DynamicProxy (Object target){
         this.target = target;
     }
     Object invocationResult = null;

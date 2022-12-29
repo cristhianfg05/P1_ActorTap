@@ -1,3 +1,5 @@
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 import java.nio.charset.StandardCharsets;
 /**aitor.arjona@urv.cat**/
 public class Main {
@@ -8,7 +10,7 @@ public class Main {
         ActorContext ActorED = ActorContext.getInstance();
         /**PARTE 1**/
         /**ActorContext es la estructura donde se guardan los actores**/
-
+        /**
         ActorProxy ringArray[] = new ActorProxy[NUM_ACTORS];
 
         for(int i = 0; i < NUM_ACTORS; i++){
@@ -22,7 +24,7 @@ public class Main {
         ringArray[NUM_ACTORS -1].getRingActor().linkActor(ringArray[0].getRingActor());
 
         ringArray[0].send(new Message(ringArray[99], "CHE VOS CUANTAS COPAS TENES BOBO?"));
-
+        **/
 
         /**SENDERS -> RECIEVER**/
         /**
@@ -31,7 +33,6 @@ public class Main {
         Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
         Sender2.send(new Message(Reciever,"Mensaje del Sender2 al Reciever"));
         Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
-
         /**RECIEVER -> SENDERS**/
         /**
         Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
@@ -76,9 +77,13 @@ public class Main {
 
         /**PARTE 4**/
 
-        /**ActorProxy actor = ActorContext.spawnActor("name", new InsultActor());
+        ActorProxy actor = ActorContext.spawnActor("name",new InsultActor());
+        InsultServiceIF insulter = (InsultServiceIF) Proxy.newProxyInstance(InsultServiceIF.class.getClassLoader(),
+                                                                        new Class[]{ InsultServiceIF.class},
+                                                                        new DynamicProxy(new InsultService()));
+        insulter.addInsult(new Message(null,"stupid"));
+        System.out.println(insulter.getInsult());
         InsultService insulter = DynamicProxy.intercept(new InsultService(), actor);
-        insulter.addInsult("stupid");
-        System.out.println(insulter.getInsult());**/
+
     }
 }
