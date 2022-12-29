@@ -3,27 +3,12 @@ import java.util.List;
 import java.util.Random;
 
 
-public class InsultService implements InsultServiceIF {
-    private List<MessageInterface> insults;
-    private Random random;
+public interface InsultService {
 
-    public InsultService(){
-        this.insults = new ArrayList<>();
-        random = new Random();
-    }
-    @Override
-    public void addInsult(MessageInterface insult) {
-        insults.add(insult);
-    }
+    public void addInsult(MessageInterface insult);
 
-    @Override
-    public MessageInterface getInsult() {
-        int index = random.nextInt(insults.size());
-        return insults.get(index);
-    }
+    public MessageInterface getInsult();
 
-    @Override
-    public List getAllInsults() {
-        return insults;
-    }
+    public List getAllInsults();
 }
+

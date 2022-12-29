@@ -78,13 +78,9 @@ public class Main {
         /**PARTE 4**/
 
         ActorProxy actor = ActorContext.spawnActor("name",new InsultActor());
-        InsultServiceIF insulter = (InsultServiceIF) Proxy.newProxyInstance(InsultServiceIF.class.getClassLoader(),
-                                                                        new Class[]{ InsultServiceIF.class},
-                                                                        new DynamicProxy(new InsultService()));
+        InsultService insulter = (InsultService) DynamicProxy.intercept(new InsultServiceImp(), actor);
         insulter.addInsult(new Message(null,"stupid"));
         System.out.println(insulter.getInsult());
-
-        //InsultService insulter = DynamicProxy.intercept(new InsultService(), actor);
 
     }
 }

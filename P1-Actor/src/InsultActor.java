@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class InsultActor implements  ActorInterface, Runnable{
+public class InsultActor implements  ActorInterface, Runnable, InsultService{
 
     private LinkedBlockingQueue<MessageInterface> queueInsultMsg;
     private ArrayList<MessageInterface> InsultList;
@@ -57,5 +58,21 @@ public class InsultActor implements  ActorInterface, Runnable{
             }
 
         }
+    }
+
+    @Override
+    public void addInsult(MessageInterface insult) {
+        InsultList.add(insult);
+    }
+
+    @Override
+    public MessageInterface getInsult() {
+        int index = new Random().nextInt(InsultList.size());
+        return InsultList.get(index);
+    }
+
+    @Override
+    public List getAllInsults() {
+        return InsultList;
     }
 }
