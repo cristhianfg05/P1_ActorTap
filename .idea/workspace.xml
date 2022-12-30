@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddClosureMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/AddClosureMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
     </list>

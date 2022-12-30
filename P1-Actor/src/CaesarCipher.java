@@ -1,8 +1,16 @@
 public class CaesarCipher {
-    /**Constant variable where all the english alphabet is**/
+
     public static final String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-    /**Method where we send a message and a shift key that encrypts in Caesar, this will return an encrypted message**/
+
+    /**
+     * Encrypts the message shifting the keys the times the variable
+     * shiftKey has in it
+     *
+     * @param message
+     * @param shiftKey
+     * @return
+     */
     public static String encrypt(String message, int shiftKey) {
         //Message in lowercase
         message = message.toLowerCase();
@@ -30,7 +38,15 @@ public class CaesarCipher {
         return cipherText;
     }
 
-    /**We send and encrypted text and this function will decrypt it, giving the same shiftkey as the encrypted one**/
+
+    /**
+     * Decrypts the message shifting the keys the times the variable
+     * shiftKey has in it
+     *
+     * @param cipherText
+     * @param shiftKey
+     * @return
+     */
     public static String decrypt(String cipherText, int shiftKey) {
         //Cypher text in lowercase
         cipherText = cipherText.toLowerCase();

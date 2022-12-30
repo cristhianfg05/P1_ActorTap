@@ -8,6 +8,12 @@ public class EncryptionDecorator extends  ActorDecorator{
     public EncryptionDecorator(ActorInterface actor) {
         super(actor);
     }
+
+    /**
+     * Encrypt message and then add to the list calling the actorDecorator
+     *
+     * @param message
+     */
     @Override
     public void send(MessageInterface message){
         message.setMsg(CaesarCipher.encrypt(message.getMsg(), 1));
@@ -15,6 +21,11 @@ public class EncryptionDecorator extends  ActorDecorator{
         super.send(message);
     }
 
+    /**
+     * Decrypt the message then process it
+     *
+     * @param message
+     */
     @Override
     public void process(MessageInterface message){
         message.setMsg(CaesarCipher.decrypt(message.getMsg(), 1));

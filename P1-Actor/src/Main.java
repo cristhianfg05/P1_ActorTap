@@ -1,7 +1,6 @@
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.nio.charset.StandardCharsets;
-/**aitor.arjona@urv.cat**/
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {

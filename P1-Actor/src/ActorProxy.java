@@ -2,25 +2,37 @@ import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ActorProxy implements ActorInterface, Runnable {
-    /**EL ACTOR PROXY HACE DE CAMINO HACIA LOS OTROS ACTORES**/
-    /**IMPIDIENDO QUE EL USUARIO TRABAJE CON LOS ACTORES DE MANERA DIRECTA**/
     private ActorInterface actor;
     private LinkedBlockingQueue<Message> queueMsg;
 
+    /**
+     * ActorProxy constructor
+     *
+     * @param a Type of actor
+     */
     public ActorProxy(ActorInterface a) {
         actor = a;
         queueMsg = new LinkedBlockingQueue<>();
     }
 
+    /**
+     * Goes to the send method from the Actor inside the proxy
+     *
+     * @param message
+     */
     @Override
     public void send(MessageInterface message) {
-        /**DESDE AQUI SE LLAMA AL SEND DE CADA ACTOR**/
+
         actor.send(message);
     }
 
     public RingActor getRingActor(){
         return (RingActor) this.actor;
     }
+
+    /**
+     * @return queueMsg from actor inside the proxy
+     */
     @Override
     public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
        return actor.getQueueMsg();

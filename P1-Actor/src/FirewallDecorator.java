@@ -6,6 +6,11 @@ public class FirewallDecorator extends ActorDecorator{
         super(actor);
     }
 
+    /**
+     * Check if a proxyClient tries to send, if no call the ActorDecorator send
+     *
+     * @param message
+     */
     @Override
     public void send (MessageInterface message){
         System.out.println("FirewallDecorator send");

@@ -10,11 +10,23 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     private ArrayList<MessageInterface> InsultList;
 
     private String name;
+
+    /**
+     * InsultActor constructor
+     *
+     * @param name
+     */
     public InsultActor(String name){
         this.name = name;
         queueInsultMsg = new LinkedBlockingQueue<>();
         InsultList = new ArrayList<>();
     }
+
+    /**
+     * The actor recieves a message from another actor and he get it inside his own queue
+     *
+     * @param message
+     */
     @Override
     public void send(MessageInterface message) {
         message.setSender(message.getSender());
@@ -22,14 +34,28 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         this.getQueueMsg().add(message);
     }
 
+    /**
+     * @return queueMsg
+     */
     @Override
     public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
         return this.queueInsultMsg;
     }
 
+    /**
+     * @return InsultList
+     */
     public ArrayList getInsultList(){
         return this.InsultList;
     }
+
+    /**
+     * Process the message, if it's a normal one just print, else check if it's getInsult, addInsult or getAllInsults
+     * then act adding or sending the message
+     *
+     * @param message
+     * @throws InterruptedException
+     */
     @Override
     public void process(MessageInterface message) throws InterruptedException {
         if(message instanceof Message){
@@ -46,16 +72,20 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         }
     }
 
+    /**
+     * @return name
+     */
     @Override
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Thread from InsultActor
+     */
     @Override
     public void run() {
         while(true){
-
-                /**PREGUNTAR A PEDRO POR EL SWITCH**/
             MessageInterface aux = null;
             try {
                 aux = queueInsultMsg.take();
@@ -67,17 +97,28 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         }
     }
 
+    /**
+     * AddInsult to the insult list
+     *
+     * @param insult
+     */
     @Override
     public void addInsult(MessageInterface insult) {
         InsultList.add(insult);
     }
 
+    /**
+     * @return random insult
+     */
     @Override
     public MessageInterface getInsult() {
         int index = new Random().nextInt(InsultList.size());
         return InsultList.get(index);
     }
 
+    /**
+     * @return all insults
+     */
     @Override
     public List getAllInsults() {
         return InsultList;

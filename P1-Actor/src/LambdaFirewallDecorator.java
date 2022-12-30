@@ -10,12 +10,24 @@ public class LambdaFirewallDecorator extends ActorDecorator {
     /**It will get a predicate through constructor that we will use after in order to send the message**/
     List<Predicate<MessageInterface>> predicate = new ArrayList<>();
 
+    /**
+     * LambdaFirewallDecorator constructor
+     *
+     * @param actor
+     * @param predicate
+     */
     public LambdaFirewallDecorator(ActorInterface actor, Predicate<MessageInterface> predicate) {
         super(actor);
         this.predicate.add(predicate);
     }
 
-    /**Override of send method, this will call test method from predicate to see if the message can be sent**/
+
+    /**
+     * if it's a Message object filter this one with the different predicates, if it's not a Message then its a predicate
+     * and has to be added to the list
+     *
+     * @param message
+     */
     @Override
     public void send(MessageInterface message) {
         if (message instanceof Message) {
