@@ -57,7 +57,7 @@ public class Main {
          **/
 
         /**PARTE 3**/
-        /**
+
         ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
         ActorProxy target = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor())); // new EncryptionDecorator()
         ActorProxy target1 = ActorContext.spawnActor("name3",new EncryptionDecorator(new FirewallDecorator (new RingActor())));
@@ -73,14 +73,14 @@ public class Main {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         target2.send(new Message(lambaDecorator,"pepito"));
         lambaDecorator.send(new Message(target2,"predicado"));
-        **/
+
 
         /**PARTE 4**/
-
+        /**
         ActorProxy actor = ActorContext.spawnActor("name",new InsultActor());
         InsultService insulter = (InsultService) DynamicProxy.intercept(new InsultServiceImp(), actor);
         insulter.addInsult(new Message(null,"stupid"));
         System.out.println(insulter.getInsult());
-
+        **/
     }
 }

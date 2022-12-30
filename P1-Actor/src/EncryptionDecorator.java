@@ -1,6 +1,8 @@
 
 import java.util.Queue;
 
+// This class extends ActorDecorator, so it has the same methods and in this case we override the send and the
+// process method because we want to encrypt our message
 public class EncryptionDecorator extends  ActorDecorator{
 
     public EncryptionDecorator(ActorInterface actor) {
