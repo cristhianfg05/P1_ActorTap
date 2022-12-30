@@ -1,9 +1,7 @@
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-// Implements the same interface as the object to be decorated
-// It has an instance of the object to be decorated so we delegate
-// every task in its functions
+
 public class ActorDecorator implements ActorInterface{
     ActorInterface actor;
 

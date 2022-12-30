@@ -2,7 +2,6 @@ import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ProxyClient implements ActorInterface, Runnable{
-    /**EL PROXY CLIENT SERA EJECUTADO DESDE EL MAIN Y USARA EL HIlO DE EL MISMO**/
     private LinkedBlockingQueue<MessageInterface> queueMsg;
     private ActorInterface actor;
 
@@ -23,12 +22,12 @@ public class ProxyClient implements ActorInterface, Runnable{
      * @param message
      */
     public void send(MessageInterface message){
-        ActorInterface aux = message.getReciever();
-        message.setSender(this);
-        message.setReciever(aux);
+        message.setReciever(this);
         //aux.getQueueMsg().add(message);
-
-        actor.send(message);
+        if(message instanceof Message){
+            System.out.println("He llegado");
+            queueMsg.add(message);
+        }else actor.send(message);
     }
 
     /**

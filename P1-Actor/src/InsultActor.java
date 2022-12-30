@@ -28,10 +28,8 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
      * @param message
      */
     @Override
-    public void send(MessageInterface message) {
-        message.setSender(message.getSender());
-        message.setReciever(this);
-        this.getQueueMsg().add(message);
+    public void send(MessageInterface message){
+        getQueueMsg().add(message);
     }
 
     /**
@@ -62,9 +60,10 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
             System.out.println(this.queueInsultMsg.take());
         }else if(message instanceof GetInsultMessage){
             int rnd = new Random().nextInt(InsultList.size());
-            message.getSender().send(new Message(null, InsultList.get(rnd).getMsg()));
+            System.out.println("HE LLEGADO, EL RANDOM ES "+rnd);
+            message.getReciever().send(new Message(null, InsultList.get(rnd).getMsg()));
         }else if(message instanceof AddInsultMessage){
-            InsultList.add(this.queueInsultMsg.take());
+            InsultList.add(message);
         }else{
             for (MessageInterface m : InsultList) {
                 send(m);

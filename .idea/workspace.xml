@@ -2,27 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddClosureMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/AddClosureMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1_ActorTap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/P1_ActorTap.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/AddClosureMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/AddClosureMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/AddInsultMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/AddInsultMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/CaesarCipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/CaesarCipher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/DynamicProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/DynamicProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/EncryptionDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/EncryptionDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/FirewallDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/FirewallDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/GetAllInsultsMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/GetAllInsultsMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/GetInsultMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/GetInsultMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/LambdaFirewallDecorator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/LambdaFirewallDecorator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ProxyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/ProxyClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -51,15 +63,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="P1_ActorTap" />
@@ -67,8 +94,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P1_ActorTap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Tests" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

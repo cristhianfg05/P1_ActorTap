@@ -34,6 +34,7 @@ public class ActorContext extends Thread{
         /**Creo un actorProxy a traves del actor que me ha llegado**/
         ActorProxy aux = new ActorProxy(newActor);
         new Thread(newActor).start();
+        //Thread.startVirtualThread(newActor);
         /**Almaceno el actor en el hashMap*/
         map.put(newActor.getName(), newActor);
 
@@ -52,6 +53,7 @@ public class ActorContext extends Thread{
         /**Creo un ProxyClient a traves del proxy que me ha llegado**/
         ProxyClient aux = new ProxyClient(newActor);
         new Thread(newActor).start();
+
         /**Almaceno el actor en el hashMap*/
         map.put(newActor.getName(), newActor);
 
@@ -77,7 +79,6 @@ public class ActorContext extends Thread{
      */
     public List<String> getNames(){
         List<String> names = new ArrayList<String>();
-        /**ESTE BUCLE REHACERLO CON LAMBDAS**/
         for(Map.Entry<String, ActorInterface> entry : map.entrySet()){
             names.add(entry.getKey());
         }

@@ -27,12 +27,12 @@ public class Main {
 
         /**PARTE 2**/
         /**
-        ProxyClient insult = ActorContext.spawnProxy("Insult", new InsultActor());
+        ProxyClient insult = ActorContext.spawnProxy(new InsultActor("Insult"));
         insult.send(new AddInsultMessage(insult, "HOLA"));
         insult.send(new GetInsultMessage(insult, ""));
         MessageInterface result = insult.recieve();
         System.out.println(result.getMsg());
-         **/
+        **/
 
         /**PARTE 3**/
         /**
@@ -54,12 +54,12 @@ public class Main {
         **/
 
         /**PARTE 4**/
-
+        /**
         ActorProxy actor = ActorContext.spawnActor(new InsultActor("name"));
         InsultService insulter = (InsultService) DynamicProxy.intercept(new InsultServiceImp(), actor);
         insulter.addInsult(new Message(null,"stupid"));
 
         System.out.println(insulter.getInsult());
-
+        **/
     }
 }

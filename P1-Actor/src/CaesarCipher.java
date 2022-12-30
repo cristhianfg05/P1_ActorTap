@@ -9,7 +9,7 @@ public class CaesarCipher {
      *
      * @param message
      * @param shiftKey
-     * @return
+     * @return encrypted message
      */
     public static String encrypt(String message, int shiftKey) {
         //Message in lowercase
@@ -45,7 +45,7 @@ public class CaesarCipher {
      *
      * @param cipherText
      * @param shiftKey
-     * @return
+     * @return decrypted message
      */
     public static String decrypt(String cipherText, int shiftKey) {
         //Cypher text in lowercase

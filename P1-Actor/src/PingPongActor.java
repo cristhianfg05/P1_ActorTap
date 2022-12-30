@@ -1,41 +1,22 @@
-import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class RingActor implements ActorInterface, Runnable {
-
-
+public class PingPongActor implements ActorInterface, Runnable {
     private LinkedBlockingQueue<MessageInterface> queueMsg;
-    private RingActor nextActor;
     private int num_vueltas;
-
     private String name;
 
-    /**
-     * RingActor constructor
-     *
-     * @param name
-     */
-    public RingActor(String name) {
+    private PingPongActor pareja;
+
+    public PingPongActor(String name) {
         this.name = name;
         queueMsg = new LinkedBlockingQueue<>();
-        nextActor = null;
         this.num_vueltas = 0;
     }
 
-    /**
-     * Links actor to next RingActor
-     *
-     * @param actor
-     */
-    public void linkActor(RingActor actor) {
-        nextActor = actor;
+    public void setPareja(PingPongActor p) {
+        pareja = p;
     }
 
-    /**
-     * Sets message to his own queue and send message to the next ringActor
-     *
-     * @param message
-     */
     @Override
     public void send(MessageInterface message) {
 
@@ -44,39 +25,32 @@ public class RingActor implements ActorInterface, Runnable {
             System.out.println("Mensaje recibido de "+message.getSender());
             message.setSender(this);
             num_vueltas++;
-            if (this.nextActor != null && this.nextActor.num_vueltas < 1) {
-                this.nextActor.send(message);
-            } else this.nextActor.send(new QuitMessage());
+            if (this.pareja.num_vueltas < 6)
+                this.pareja.send(message);
+            else this.pareja.send(new QuitMessage());
         } else {
-            this.queueMsg.add(message);
             System.out.println("He roto la cadena");
+            this.queueMsg.add(message);
         }
-
 
     }
 
-    /**
-     * process message printing
-     *
-     * @param message
-     */
+
     @Override
-    public void process(MessageInterface message) {
-        //System.out.println("Process Ring");
+    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
+        return queueMsg;
+    }
+
+    @Override
+    public void process(MessageInterface message) throws InterruptedException {
         System.out.println(message);
     }
 
-    /**
-     * @return name
-     */
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    /**
-     * Thread from each RingActor
-     */
     @Override
     public void run() {
         while (true) {
@@ -91,11 +65,8 @@ public class RingActor implements ActorInterface, Runnable {
         }
     }
 
-    /**
-     * @return queueMsg
-     */
-    public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
-        return queueMsg;
+    public int getNum_vueltas() {
+        return num_vueltas;
     }
 
     @Override
@@ -103,7 +74,7 @@ public class RingActor implements ActorInterface, Runnable {
         if (name == null)
             return "Main";
         else
-            return "RingActor{" +
+            return "PingPongActor{" +
                     "name='" + name + '\'' +
                     '}';
     }

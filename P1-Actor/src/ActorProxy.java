@@ -29,6 +29,9 @@ public class ActorProxy implements ActorInterface, Runnable {
     public RingActor getRingActor(){
         return (RingActor) this.actor;
     }
+    public PingPongActor getPingPongActor(){
+        return (PingPongActor) this.actor;
+    }
 
     /**
      * @return queueMsg from actor inside the proxy
@@ -51,5 +54,10 @@ public class ActorProxy implements ActorInterface, Runnable {
     @Override
     public void run() {
 
+    }
+
+    @Override
+    public String toString() {
+        return actor.toString();
     }
 }
