@@ -8,7 +8,9 @@ public class RingActor implements ActorInterface, Runnable{
     private RingActor nextActor;
     private int num_vueltas;
 
-    public RingActor (){
+    private String name;
+    public RingActor (String name){
+        this.name = name;
         queueMsg = new LinkedBlockingQueue<>();
         nextActor = null;
         this.num_vueltas = 0;
@@ -36,6 +38,11 @@ public class RingActor implements ActorInterface, Runnable{
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void run() {
         while(true){
             try {
@@ -53,5 +60,13 @@ public class RingActor implements ActorInterface, Runnable{
         return queueMsg;
     }
 
-
+    @Override
+    public String toString() {
+        if(name == null)
+            return "Main";
+        else
+        return "RingActor{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

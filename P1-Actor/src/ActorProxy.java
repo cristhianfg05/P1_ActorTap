@@ -32,6 +32,11 @@ public class ActorProxy implements ActorInterface, Runnable {
     }
 
     @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
     public void run() {
 
     }

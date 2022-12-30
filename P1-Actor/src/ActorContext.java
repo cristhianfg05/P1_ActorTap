@@ -18,12 +18,12 @@ public class ActorContext extends Thread{
         return actor;
     }
 
-    public static ActorProxy spawnActor(String name,ActorInterface newActor){
+    public static ActorProxy spawnActor(ActorInterface newActor){
         /**Creo un actorProxy a traves del actor que me ha llegado**/
         ActorProxy aux = new ActorProxy(newActor);
         new Thread(newActor).start();
         /**Almaceno el actor en el hashMap*/
-        map.put(name, newActor);
+        map.put(newActor.getName(), newActor);
 
         /**Devuelvo el actorProxy (puede ser cualquier tipo de actor)**/
         return aux;

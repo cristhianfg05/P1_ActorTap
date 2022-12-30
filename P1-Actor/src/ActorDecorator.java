@@ -25,6 +25,11 @@ public class ActorDecorator implements ActorInterface{
     }
 
     @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
     public void run() {
         while(true){
             try {

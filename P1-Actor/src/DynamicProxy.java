@@ -23,7 +23,7 @@ public class DynamicProxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
         System.out.println("Hola, voy a enviar un msj: ");
-        actor.send(new Message(new InsultActor(),"Idiota"));
+        actor.send(new Message(new InsultActor("Insult Example"),"Idiota"));
         Object result = method.invoke(target, args);
         return result;
     }

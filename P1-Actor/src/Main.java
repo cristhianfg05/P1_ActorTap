@@ -15,7 +15,7 @@ public class Main {
 
         for(int i = 0; i < NUM_ACTORS; i++){
             String name = "Ring" + i;
-            ringArray[i] = ActorContext.spawnActor(name, new RingActor());
+            ringArray[i] = ActorContext.spawnActor(new RingActor(name));
         }
 
         for (int j = 1; j < NUM_ACTORS; j++){
@@ -25,27 +25,6 @@ public class Main {
 
         ringArray[0].send(new Message(ringArray[99], "CHE VOS CUANTAS COPAS TENES BOBO?"));
         **/
-
-        /**SENDERS -> RECIEVER**/
-        /**
-        Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
-        Sender2.send(new Message(Reciever,"Mensaje del Sender2 al Reciever"));
-        Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
-        Sender2.send(new Message(Reciever,"Mensaje del Sender2 al Reciever"));
-        Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
-        /**RECIEVER -> SENDERS**/
-        /**
-        Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
-        Reciever.send(new Message(Sender2,"Mensaje del Reciever al Sender2"));
-        Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
-        Reciever.send(new Message(Sender2,"Mensaje del Reciever al Sender2"));
-        Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
-
-        /**PRUEBA CON PAUSA PARA LAS COLAS**/
-        /**
-        Thread.sleep(10000);
-        Sender.send(new Message(Reciever,"Mensaje del Sender al Reciever"));
-        Reciever.send(new Message(Sender,"Mensaje del Reciever al Sender"));
 
         /**PARTE 2**/
         /**
@@ -57,7 +36,7 @@ public class Main {
          **/
 
         /**PARTE 3**/
-
+        /**
         ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
         ActorProxy target = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor())); // new EncryptionDecorator()
         ActorProxy target1 = ActorContext.spawnActor("name3",new EncryptionDecorator(new FirewallDecorator (new RingActor())));
@@ -73,14 +52,15 @@ public class Main {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         target2.send(new Message(lambaDecorator,"pepito"));
         lambaDecorator.send(new Message(target2,"predicado"));
-
+        **/
 
         /**PARTE 4**/
-        /**
-        ActorProxy actor = ActorContext.spawnActor("name",new InsultActor());
+
+        ActorProxy actor = ActorContext.spawnActor(new InsultActor("name"));
         InsultService insulter = (InsultService) DynamicProxy.intercept(new InsultServiceImp(), actor);
         insulter.addInsult(new Message(null,"stupid"));
+
         System.out.println(insulter.getInsult());
-        **/
+
     }
 }

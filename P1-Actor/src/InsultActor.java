@@ -9,7 +9,9 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     private LinkedBlockingQueue<MessageInterface> queueInsultMsg;
     private ArrayList<MessageInterface> InsultList;
 
-    public InsultActor(){
+    private String name;
+    public InsultActor(String name){
+        this.name = name;
         queueInsultMsg = new LinkedBlockingQueue<>();
         InsultList = new ArrayList<>();
     }
@@ -45,6 +47,11 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void run() {
         while(true){
 
@@ -75,4 +82,15 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     public List getAllInsults() {
         return InsultList;
     }
+
+    @Override
+    public String toString() {
+        if(name == null)
+            return "Main";
+        else
+            return "InsultActor{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
+

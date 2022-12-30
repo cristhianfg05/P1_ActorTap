@@ -34,6 +34,12 @@ public class ProxyClient implements ActorInterface, Runnable{
     public void process(MessageInterface message){
 
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
     @Override
     public void run() {
 
