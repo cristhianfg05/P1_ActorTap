@@ -1,11 +1,7 @@
-
-import org.junit.Test;
-import org.junit.rules.Stopwatch;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.time.Instant;
-
-import static org.junit.jupiter.api.Assertions.*;
 public class Tests {
 
     public ActorContext ActorED = ActorContext.getInstance();
@@ -74,7 +70,8 @@ public class Tests {
     }
 
     @Test
-    public void testParte4(){
+    public void testParte3(){
+        System.out.println("-----------------------------------------------------------------------------");
         ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("Ring0"))));
         ActorProxy target = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring1"))); // new EncryptionDecorator()
         ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator (new Actor("Ring2"))));
@@ -90,13 +87,28 @@ public class Tests {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         target2.send(new Message(lambaDecorator,"pepito"));
         lambaDecorator.send(new Message(target2,"predicado"));
+        System.out.println("-----------------------------------------------------------------------------");
     }
 
     @Test
-    public void testParte5(){
+    public void testParte4(){
         ActorProxy actor = ActorContext.spawnActor(new InsultActor("name"));
         InsultService insulter = (InsultService) DynamicProxy.intercept(new InsultServiceImp(), actor);
         insulter.addInsult(new Message(null,"stupid"));
+        insulter.addInsult(new Message(null,"Chupachanclas"));
+        insulter.addInsult(new Message(null,"Gilipollas"));
+
+        insulter.addInsult(new Message(null,"stupid1"));
+        insulter.addInsult(new Message(null,"Chupachanclas2"));
+        insulter.addInsult(new Message(null,"Gilipollas3"));
+        insulter.addInsult(new Message(null,"stupid4"));
+        insulter.addInsult(new Message(null,"Chupachanclas5"));
+        insulter.addInsult(new Message(null,"Gilipollas6"));
+        insulter.addInsult(new Message(null,"stupid7"));
+        insulter.addInsult(new Message(null,"Chupachanclas8"));
+        insulter.addInsult(new Message(null,"Gilipollas9"));
+
+
 
         System.out.println(insulter.getInsult());
     }

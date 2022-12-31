@@ -15,6 +15,7 @@ public class RingActor implements ActorInterface, Runnable {
      *
      * @param name
      */
+
     public RingActor(String name) {
         this.name = name;
         queueMsg = new LinkedBlockingQueue<>();

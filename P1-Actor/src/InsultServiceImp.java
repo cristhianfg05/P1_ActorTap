@@ -4,14 +4,13 @@ import java.util.Random;
 
 public class InsultServiceImp implements InsultService{
     private List<MessageInterface> insults;
-    private Random random;
 
     /**
      * InsultServiceImp constructor
      */
     public InsultServiceImp(){
         insults = new ArrayList<>();
-        random = new Random();
+
     }
 
     /**
@@ -29,7 +28,7 @@ public class InsultServiceImp implements InsultService{
      */
     @Override
     public MessageInterface getInsult() {
-        int index = random.nextInt(insults.size());
+        int index = new Random().nextInt(insults.size());
         return insults.get(index);
     }
 

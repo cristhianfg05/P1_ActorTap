@@ -7,6 +7,7 @@ public class Main {
         final int NUM_ACTORS = 6;
 
         ActorContext ActorED = ActorContext.getInstance();
+
         /**PARTE 1**/
         /**ActorContext es la estructura donde se guardan los actores**/
         /**
@@ -35,13 +36,13 @@ public class Main {
         **/
 
         /**PARTE 3**/
-        /**
-        ActorProxy sender = ActorContext.spawnActor("name",new FirewallDecorator(new EncryptionDecorator(new RingActor())));
-        ActorProxy target = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor())); // new EncryptionDecorator()
-        ActorProxy target1 = ActorContext.spawnActor("name3",new EncryptionDecorator(new FirewallDecorator (new RingActor())));
-        ActorProxy target2 = ActorContext.spawnActor("name1",new FirewallDecorator (new RingActor()));
-        ProxyClient proxy = ActorContext.spawnProxy("name2", new FirewallDecorator(new RingActor()));
-        ActorProxy lambaDecorator = ActorContext.spawnActor("lambaDecorator", new LambdaFirewallDecorator(new RingActor(), x -> x.getMsg() != null ));
+
+        ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("a"))));
+        ActorProxy target = ActorContext.spawnActor(new FirewallDecorator (new Actor("b"))); // new EncryptionDecorator()
+        ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator (new Actor("c"))));
+        ActorProxy target2 = ActorContext.spawnActor(new FirewallDecorator (new Actor("d")));
+        ProxyClient proxy = ActorContext.spawnProxy( new FirewallDecorator(new Actor("e")));
+        ActorProxy lambaDecorator = ActorContext.spawnActor( new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null ));
 
         target.send(new Message(sender,"hola que tal"));
         target1.send(new Message(sender, "hola que tal dos"));
@@ -51,7 +52,7 @@ public class Main {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         target2.send(new Message(lambaDecorator,"pepito"));
         lambaDecorator.send(new Message(target2,"predicado"));
-        **/
+
 
         /**PARTE 4**/
         /**

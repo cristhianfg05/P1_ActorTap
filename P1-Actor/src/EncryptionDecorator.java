@@ -27,8 +27,8 @@ public class EncryptionDecorator extends  ActorDecorator{
      * @param message
      */
     @Override
-    public void process(MessageInterface message){
+    public void process(MessageInterface message) throws InterruptedException {
         message.setMsg(CaesarCipher.decrypt(message.getMsg(), 1));
-        System.out.println("Decrypted message: " + message.getMsg());
+        super.process(message);
     }
 }
