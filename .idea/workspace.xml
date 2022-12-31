@@ -42,7 +42,10 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -94,7 +97,9 @@
       <workItem from="1672224557031" duration="833000" />
       <workItem from="1672301250434" duration="3662000" />
       <workItem from="1672393326984" duration="1166000" />
-      <workItem from="1672480062311" duration="2411000" />
+      <workItem from="1672480062311" duration="2445000" />
+      <workItem from="1672482953025" duration="508000" />
+      <workItem from="1672483513161" duration="14000" />
     </task>
     <servers />
   </component>

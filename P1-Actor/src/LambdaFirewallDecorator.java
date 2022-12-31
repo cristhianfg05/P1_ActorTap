@@ -34,7 +34,6 @@ public class LambdaFirewallDecorator extends ActorDecorator {
             System.out.println("he entrado");
             List<Predicate<MessageInterface>> aux = predicate.stream()
                     .filter(x -> x.test(message)).collect(Collectors.toList());
-            System.out.println("Size aux: " + aux.size() + " Size de la lista de preds : " + predicate.size());
             if (aux.size() == predicate.size()) {
                 System.out.println("Envio el mensajito");
                 super.send(message);

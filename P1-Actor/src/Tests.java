@@ -71,12 +71,12 @@ public class Tests {
 
     @Test
     public void testParte3(){
-        System.out.println("-----------------------------------------------------------------------------");
+
         ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("Ring0"))));
         ActorProxy target = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring1"))); // new EncryptionDecorator()
         ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator (new Actor("Ring2"))));
         ActorProxy target2 = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring3")));
-        ProxyClient proxy = ActorContext.spawnProxy( new FirewallDecorator(new Actor("Ring4")));
+        ProxyClient proxy = ActorContext.spawnProxy(new Actor("Ring4"));
         ActorProxy lambaDecorator = ActorContext.spawnActor( new LambdaFirewallDecorator(new Actor("RingLambda"), x -> x.getMsg() != null ));
 
         target.send(new Message(sender,"hola que tal"));
@@ -87,7 +87,7 @@ public class Tests {
         lambaDecorator.send(new AddClosureMessage(x-> x.getMsg().equals("predicado")));
         target2.send(new Message(lambaDecorator,"pepito"));
         lambaDecorator.send(new Message(target2,"predicado"));
-        System.out.println("-----------------------------------------------------------------------------");
+
     }
 
     @Test
