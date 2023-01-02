@@ -5,11 +5,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Controlador/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Model/FactoryNormal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Model/FactoryThreads.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Model/FactoryVirtual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Vista/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/Actor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Actor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/ActorContext.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/ActorContext.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/ActorDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/ActorDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/ActorInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/ActorInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/ActorProxy.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/ActorProxy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/AddClosureMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/AddClosureMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/AddInsultMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/AddInsultMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/CaesarCipher.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/CaesarCipher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/DynamicProxy.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/DynamicProxy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/EncryptionDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/EncryptionDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/FirewallDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/FirewallDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/GetAllInsultsMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/GetAllInsultsMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/GetInsultMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/GetInsultMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/InsultActor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/InsultActor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/InsultService.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/InsultService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/InsultServiceImp.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/InsultServiceImp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/LambdaFirewallDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/LambdaFirewallDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/Message.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/MessageInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/MessageInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/PingPongActor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/PingPongActor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/ProxyClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/ProxyClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/QuitMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/QuitMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/RingActor.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/RingActor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Tests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ActorContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ActorDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ActorInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ActorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddClosureMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/AddClosureMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/AddInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/AddInsultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/CaesarCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/CaesarCipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/DynamicProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/EncryptionDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/EncryptionDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/FirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/FirewallDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetAllInsultsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/GetAllInsultsMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/GetInsultMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/GetInsultMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/InsultActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/InsultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/InsultServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/LambdaFirewallDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/LambdaFirewallDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/MessageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/MessageInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/MonitorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/MonitorInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/MonitorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Vista/NewJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/PingPongActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ProxyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/QuitMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/QuitMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/RingActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Actor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ActorProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/AddClosureMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/AddInsultMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/CaesarCipher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/DynamicProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/EncryptionDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/FirewallDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/GetAllInsultsMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/GetInsultMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultActor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/InsultServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/LambdaFirewallDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/MessageInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/MonitorInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/MonitorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/NewJFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/NewJFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/NewJFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/NewJFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/PingPongActor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/ProxyClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/QuitMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/RingActor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Tests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +129,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,9 +161,9 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_opened_file_path": "C:/Users/crist/Documents/NetBeansProjects/P1_ActorTap",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,25 +174,38 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewJFrame">
+  <component name="RunManager" selected="Application.Vista">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="Model.Main" />
       <module name="P1_ActorTap" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="NewJFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NewJFrame" />
+      <option name="MAIN_CLASS_NAME" value="Vista.NewJFrame" />
       <module name="P1_ActorTap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Vista.Vista" />
+      <module name="P1_ActorTap" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P1_ActorTap" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="Model" />
+      <option name="MAIN_CLASS_NAME" value="Model.Tests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,9 +213,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Vista" />
+        <item itemvalue="JUnit.Tests" />
         <item itemvalue="Application.NewJFrame" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Tests" />
       </list>
     </recent_temporary>
   </component>
