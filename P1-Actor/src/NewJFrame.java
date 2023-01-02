@@ -17,7 +17,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
 
-
         btSimulate = new javax.swing.JButton();
         Decorator = new javax.swing.JCheckBox();
         Encrypt = new javax.swing.JCheckBox();
@@ -120,48 +119,45 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void btSimulateActionPerformed(java.awt.event.ActionEvent evt) {
-        if(Decorator.isSelected() && !Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()){
+        if (Decorator.isSelected() && !Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()) {
             System.out.print("SIMULACIÓN DECORATOR\n");
             target.send(new Message(sender, mensajeActores.getText()));
-            boolean not = Observer.notifyMonitor(m,"mensajeEnviado",target);
-        }else if(Decorator.isSelected() && Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()){
+            boolean not = Observer.notifyMonitor(m, "mensajeEnviado", target);
+        } else if (Decorator.isSelected() && Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()) {
             target1.send(new Message(sender, mensajeActores.getText()));
-            boolean not = Observer.notifyMonitor(m,"mensajeEnviado",target1);
-        }else if(!Decorator.isSelected() && Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()){
+            boolean not = Observer.notifyMonitor(m, "mensajeEnviado", target1);
+        } else if (!Decorator.isSelected() && Encrypt.isSelected() && !PingPong.isSelected() && !RingActor.isSelected()) {
             target3.send(new Message(sender, mensajeActores.getText()));
-            boolean not = Observer.notifyMonitor(m,"mensajeEnviado",target3);
-        }else if(!Decorator.isSelected() && !Encrypt.isSelected() && PingPong.isSelected() && !RingActor.isSelected()){
+            boolean not = Observer.notifyMonitor(m, "mensajeEnviado", target3);
+        } else if (!Decorator.isSelected() && !Encrypt.isSelected() && PingPong.isSelected() && !RingActor.isSelected()) {
             ActorProxy ping1 = ActorContext.spawnActor(new PingPongActor("PingPong 1"));
             ActorProxy ping2 = ActorContext.spawnActor(new PingPongActor("PingPong 2"));
             ping2.getPingPongActor().setPareja(ping1.getPingPongActor());
             ping1.getPingPongActor().setPareja(ping2.getPingPongActor());
-            ping2.send(new Message(ping1,mensajeActores.getText()));
-        }else if(!Decorator.isSelected() && !Encrypt.isSelected() && !PingPong.isSelected() && RingActor.isSelected()){
+            ping2.send(new Message(ping1, mensajeActores.getText()));
+        } else if (!Decorator.isSelected() && !Encrypt.isSelected() && !PingPong.isSelected() && RingActor.isSelected()) {
             ActorProxy ringArray[] = new ActorProxy[10];
-            for (int i = 0; i < 10; i++){
-                String name = "Ring "+i;
+            for (int i = 0; i < 10; i++) {
+                String name = "Ring " + i;
                 ringArray[i] = ActorContext.spawnActor(new RingActor(name));
             }
 
-            for (int i = 1; i < 10; i++){
-                ringArray[i-1].getRingActor().linkActor(ringArray[i].getRingActor());
+            for (int i = 1; i < 10; i++) {
+                ringArray[i - 1].getRingActor().linkActor(ringArray[i].getRingActor());
             }
             ringArray[9].getRingActor().linkActor(ringArray[0].getRingActor());
 
             ringArray[0].send(new Message(ringArray[9], mensajeActores.getText()));
-        }else System.out.println("Simulación no disponible");
+        } else System.out.println("Simulación no disponible");
     }
 
 
     private void btPredicateActionPerformed(java.awt.event.ActionEvent evt) {
 
-        if(!newPredicate.getText().isEmpty()){
-            System.out.println(newPredicate.getText());
-            lambaDecorator.send(new AddClosureMessage(x -> x.getMsg().equals(newPredicate.getText())));
-        }else{
-            System.out.println("Entré");
-            lambaDecorator.send(new Message(target2, mensajePredicate.getText()));
-        }
+        System.out.println(newPredicate.getText());
+        lambaDecorator.send(new AddClosureMessage(x -> x.getMsg().equals(newPredicate.getText())));
+        lambaDecorator.send(new Message(target2, mensajePredicate.getText()));
+
     }
 
     /**

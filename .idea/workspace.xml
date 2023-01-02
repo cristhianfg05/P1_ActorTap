@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Observer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

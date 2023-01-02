@@ -8,7 +8,6 @@ public class Main {
         final int NUM_ACTORS = 6;
 
         ActorContext ActorED = ActorContext.getInstance();
-        Observer ob = Observer.getInstance();
 
         /**PARTE 1**/
         /**ActorContext es la estructura donde se guardan los actores**/
