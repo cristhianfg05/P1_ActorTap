@@ -48,6 +48,11 @@ public class ActorDecorator implements ActorInterface{
         return null;
     }
 
+    @Override
+    public int getMsg() {
+        return 0;
+    }
+
     /**
      * Thread method, process every msg from the queue
      */

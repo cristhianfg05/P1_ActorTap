@@ -52,6 +52,11 @@ public class ActorProxy implements ActorInterface, Runnable {
     }
 
     @Override
+    public int getMsg() {
+        return 0;
+    }
+
+    @Override
     public void run() {
 
     }

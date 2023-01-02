@@ -6,11 +6,13 @@ public class PingPongActor implements ActorInterface, Runnable {
     private String name;
 
     private PingPongActor pareja;
+    private int numMsg;
 
     public PingPongActor(String name) {
         this.name = name;
         queueMsg = new LinkedBlockingQueue<>();
         this.num_vueltas = 0;
+        numMsg = 0;
     }
 
     public void setPareja(PingPongActor p) {
@@ -49,6 +51,11 @@ public class PingPongActor implements ActorInterface, Runnable {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int getMsg() {
+        return numMsg;
     }
 
     @Override

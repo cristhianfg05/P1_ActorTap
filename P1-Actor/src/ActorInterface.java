@@ -9,4 +9,6 @@ public interface ActorInterface extends Runnable {
     public void process(MessageInterface message) throws InterruptedException;
 
     public String getName();
+
+    public int getMsg();
 }

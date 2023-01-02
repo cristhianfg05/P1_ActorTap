@@ -7,6 +7,7 @@ public class RingActor implements ActorInterface, Runnable {
     private LinkedBlockingQueue<MessageInterface> queueMsg;
     private RingActor nextActor;
     private int num_vueltas;
+    private int numMsg;
 
     private String name;
 
@@ -21,6 +22,7 @@ public class RingActor implements ActorInterface, Runnable {
         queueMsg = new LinkedBlockingQueue<>();
         nextActor = null;
         this.num_vueltas = 0;
+        numMsg = 0;
     }
 
     /**
@@ -45,6 +47,7 @@ public class RingActor implements ActorInterface, Runnable {
             System.out.println("Mensaje recibido de "+message.getSender());
             message.setSender(this);
             num_vueltas++;
+            numMsg++;
             if (this.nextActor != null && this.nextActor.num_vueltas < 1) {
                 this.nextActor.send(message);
             } else this.nextActor.send(new QuitMessage());
@@ -73,6 +76,11 @@ public class RingActor implements ActorInterface, Runnable {
     @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public int getMsg() {
+        return numMsg;
     }
 
     /**

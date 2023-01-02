@@ -9,6 +9,8 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     private LinkedBlockingQueue<MessageInterface> queueInsultMsg;
     private ArrayList<MessageInterface> InsultList;
 
+    private int numMsg;
+
     private String name;
 
     /**
@@ -20,6 +22,7 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         this.name = name;
         queueInsultMsg = new LinkedBlockingQueue<>();
         InsultList = new ArrayList<>();
+        numMsg = 0;
     }
 
     /**
@@ -30,6 +33,9 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     @Override
     public void send(MessageInterface message){
         getQueueMsg().add(message);
+        if(message instanceof Message){
+            numMsg++;
+        }
     }
 
     /**
@@ -77,6 +83,11 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public int getMsg() {
+        return numMsg;
     }
 
     /**

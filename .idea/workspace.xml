@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/MonitorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/NewJFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ActorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/InsultActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/PingPongActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/ProxyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/RingActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -36,24 +49,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagu/Desktop/Universidad/3r año/TAP/TAP-master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/crist/Documents/NetBeansProjects/P1_ActorTap",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -62,9 +75,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Tests">
+  <component name="RunManager" selected="Application.NewJFrame">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="P1_ActorTap" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewJFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NewJFrame" />
       <module name="P1_ActorTap" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,8 +101,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Tests" />
+        <item itemvalue="Application.NewJFrame" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Tests" />
       </list>
     </recent_temporary>
   </component>
