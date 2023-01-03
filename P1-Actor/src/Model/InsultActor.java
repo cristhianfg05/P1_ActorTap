@@ -13,6 +13,7 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     private int numMsg;
 
     private String name;
+    private ArrayList<Observer> subList;
 
     /**
      * Model.InsultActor constructor
@@ -24,6 +25,8 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         queueInsultMsg = new LinkedBlockingQueue<>();
         InsultList = new ArrayList<>();
         numMsg = 0;
+        subList = new ArrayList<>();
+        notifySub(Actions.CREATE);
     }
 
     /**
@@ -35,6 +38,7 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     public void send(MessageInterface message){
         getQueueMsg().add(message);
         if(message instanceof Message){
+            notifySub(Actions.SEND);
             numMsg++;
         }
     }
@@ -100,8 +104,14 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
             MessageInterface aux = null;
             try {
                 aux = queueInsultMsg.take();
-                process(aux);
+                if(!(aux instanceof QuitMessage))
+                    process(aux);
+                else{
+                    notifySub(Actions.DIE);
+                    break;
+                }
             } catch (InterruptedException e) {
+                notifySub(Actions.ERROR);
                 throw new RuntimeException(e);
             }
 
@@ -143,6 +153,42 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
             return "Model.InsultActor{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    /**
+     * Add the observer to the subs list
+     * @param o Observer
+     */
+    @Override
+    public void subscrib(Observer o) {
+        if(!subList.contains(o)){
+            subList.add(o);
+            notifySub(Actions.CREATE);
+            System.out.println("Se ha suscrito exitosamente");
+        }
+    }
+    /**
+     * Remove the observer from the subs list
+     * @param o Observer
+     */
+    @Override
+    public void unsub(Observer o) {
+        if(subList.contains(o)){
+            subList.remove(o);
+            System.out.println("Se ha dessuscrito exitosamente");
+        }
+    }
+
+
+    /**
+     * Notify each Observer
+     * @param a Action done
+     */
+    @Override
+    public void notifySub(Actions a) {
+        for(Observer o : subList){
+            o.update(name,a);
+        }
     }
 }
 

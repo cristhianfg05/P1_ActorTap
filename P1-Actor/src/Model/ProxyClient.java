@@ -54,16 +54,40 @@ public class ProxyClient implements ActorInterface, Runnable{
 
     @Override
     public String getName() {
-        return null;
+        return actor.getName();
     }
 
     @Override
     public int getMsg() {
-        return 0;
+        return actor.getMsg();
     }
 
     @Override
     public void run() {
+
+    }
+
+    /**
+     * @param o
+     */
+    @Override
+    public void subscrib(Observer o) {
+
+    }
+
+    /**
+     * @param o
+     */
+    @Override
+    public void unsub(Observer o) {
+
+    }
+
+    /**
+     * @param a
+     */
+    @Override
+    public void notifySub(Actions a) {
 
     }
 }

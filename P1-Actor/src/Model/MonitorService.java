@@ -1,41 +1,14 @@
 package Model;
 
-import java.util.ArrayList;
 
-public class MonitorService implements MonitorInterface{
-
-    private ArrayList<ActorInterface> listaActores;
-
+public class MonitorService implements Observer{
     /**
-     * Constructor from Model.MonitorService
-     */
-    public MonitorService(){
-        listaActores = new ArrayList<>();
-    }
-
-    /**
-     * @param a Model.Actor interface
-     * @return if Monitor is subscribed to an Model.Actor
-     */
-    public boolean actorSubscrito(ActorInterface a){
-        return listaActores.contains(a);
-    }
-
-    /**
-     * @return subscribed list
-     */
-    public ArrayList getList(){
-        return listaActores;
-    }
-
-    /**
-     * Notify the Monitor about the state of the actor
-     * due to probles during the development it only notify some sent messages
-     *
-     * @param state
+     * Give's info about the state of the Actor
+     * @param name Actor's name
+     * @param action Action the actor is doing
      */
     @Override
-    public void Update(String state) {
-        System.out.println("Procedo a notificar, acaba de pasar un "+ state);
+    public void update(String name, Actions action) {
+        System.out.println("ESTOY SIENDO NOTIFICADO " +name+ " ha "+action.name());
     }
 }

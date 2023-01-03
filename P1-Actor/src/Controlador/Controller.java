@@ -7,12 +7,12 @@ public class Controller {
     public Controller(){}
 
     ActorContext ac = ActorContext.getInstance();
-    ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("Ring0"))));
-    ActorProxy target = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring1"))); // new Model.EncryptionDecorator()
-    ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator (new Actor("Ring2"))));
-    ActorProxy target2 = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring3")));
-    ActorProxy targetEnc = ActorContext.spawnActor(new EncryptionDecorator(new Actor("enc")));
-    ActorProxy lambaDecorator = ActorContext.spawnActor( new LambdaFirewallDecorator(new Actor("RingLambda"), x -> x.getMsg() != null ));
+    ActorProxy targetEnc = ActorContext.spawnActor((new EncryptionDecorator(new Actor("enc"))).getActor());
+    ActorProxy sender = ActorContext.spawnActor((new FirewallDecorator((new EncryptionDecorator(new Actor("a"))).getActor())).getActor());
+    ActorProxy target = ActorContext.spawnActor((new FirewallDecorator(new Actor("b"))).getActor()); // new Model.EncryptionDecorator()
+    ActorProxy target1 = ActorContext.spawnActor((new EncryptionDecorator((new FirewallDecorator(new Actor("c"))).getActor())).getActor());
+    ActorProxy target2 = ActorContext.spawnActor((new FirewallDecorator(new Actor("d"))).getActor());
+    ActorProxy lambaDecorator = ActorContext.spawnActor((new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null)).getActor());
     public void simulacio1(String msg, String tipus){
         switch(tipus){
             case "RingActor":

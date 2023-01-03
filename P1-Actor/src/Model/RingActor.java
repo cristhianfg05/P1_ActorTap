@@ -1,8 +1,9 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class RingActor implements ActorInterface, Runnable {
+public class RingActor implements ActorInterface, Runnable, Publisher {
 
 
     private LinkedBlockingQueue<MessageInterface> queueMsg;
@@ -11,6 +12,7 @@ public class RingActor implements ActorInterface, Runnable {
     private int numMsg;
 
     private String name;
+    private ArrayList<Observer> subList;
 
     /**
      * Model.RingActor constructor
@@ -24,6 +26,8 @@ public class RingActor implements ActorInterface, Runnable {
         nextActor = null;
         this.num_vueltas = 0;
         numMsg = 0;
+        subList = new ArrayList<>();
+        notifySub(Actions.CREATE);
     }
 
     /**
@@ -49,6 +53,7 @@ public class RingActor implements ActorInterface, Runnable {
             message.setSender(this);
             num_vueltas++;
             numMsg++;
+            notifySub(Actions.SEND);
             if (this.nextActor != null && this.nextActor.num_vueltas < 1) {
                 this.nextActor.send(message);
             } else this.nextActor.send(new QuitMessage());
@@ -67,7 +72,6 @@ public class RingActor implements ActorInterface, Runnable {
      */
     @Override
     public void process(MessageInterface message) {
-        //System.out.println("Process Ring");
         System.out.println(message);
     }
 
@@ -92,10 +96,14 @@ public class RingActor implements ActorInterface, Runnable {
         while (true) {
             try {
                 MessageInterface aux = this.queueMsg.take();
-                if (aux instanceof Message)
+                if (aux instanceof Message) {
                     process(aux);
-                else break;
+                }else{
+                    notifySub(Actions.DIE);
+                    break;
+                }
             } catch (InterruptedException e) {
+                notifySub(Actions.ERROR);
                 throw new RuntimeException(e);
             }
         }
@@ -110,11 +118,45 @@ public class RingActor implements ActorInterface, Runnable {
 
     @Override
     public String toString() {
-        if (name == null)
-            return "Model.Main";
-        else
-            return "Model.RingActor{" +
-                    "name='" + name + '\'' +
-                    '}';
+        return "RingActor{" +
+                ", num_vueltas=" + num_vueltas +
+                ", numMsg=" + numMsg +
+                ", name='" + name + '\'' +
+                '}';
+    }
+    /**
+     * Add the observer to the subs list
+     * @param o Observer
+     */
+    @Override
+    public void subscrib(Observer o) {
+        if(!subList.contains(o)){
+            subList.add(o);
+            notifySub(Actions.CREATE);
+            System.out.println("Se ha suscrito exitosamente");
+        }
+    }
+    /**
+     * Remove the observer from the subs list
+     * @param o Observer
+     */
+    @Override
+    public void unsub(Observer o) {
+        if(subList.contains(o)){
+            subList.remove(o);
+            System.out.println("Se ha dessuscrito exitosamente");
+        }
+    }
+
+
+    /**
+     * Notify each Observer
+     * @param a Action done
+     */
+    @Override
+    public void notifySub(Actions a) {
+        for(Observer o : subList){
+            o.update(name,a);
+        }
     }
 }

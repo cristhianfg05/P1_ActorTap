@@ -76,13 +76,15 @@ public class Tests {
     @Test
     public void testParte3(){
 
-        ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("Ring0"))));
-        ActorProxy target = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring1"))); // new Model.EncryptionDecorator()
-        ActorProxy targetEnc = ActorContext.spawnActor(new EncryptionDecorator(new Actor("enc")));
-        ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator (new Actor("Ring2"))));
-        ActorProxy target2 = ActorContext.spawnActor(new FirewallDecorator (new Actor("Ring3")));
-        ProxyClient proxy = ActorContext.spawnProxy(new Actor("Ring4"));
-        ActorProxy lambaDecorator = ActorContext.spawnActor( new LambdaFirewallDecorator(new Actor("RingLambda"), x -> x.getMsg() != null ));
+
+        ActorProxy targetEnc = ActorContext.spawnActor((new EncryptionDecorator(new Actor("enc"))).getActor());
+        ActorProxy sender = ActorContext.spawnActor((new FirewallDecorator((new EncryptionDecorator(new Actor("a"))).getActor())).getActor());
+        ActorProxy target = ActorContext.spawnActor((new FirewallDecorator(new Actor("b"))).getActor()); // new Model.EncryptionDecorator()
+        ActorProxy target3 = ActorContext.spawnActor((new EncryptionDecorator(new Actor("f"))).getActor());
+        ActorProxy target1 = ActorContext.spawnActor((new EncryptionDecorator((new FirewallDecorator(new Actor("c"))).getActor())).getActor());
+        ActorProxy target2 = ActorContext.spawnActor((new FirewallDecorator(new Actor("d"))).getActor());
+        ProxyClient proxy = ActorContext.spawnProxy((new FirewallDecorator(new Actor("e"))).getActor());
+        ActorProxy lambaDecorator = ActorContext.spawnActor((new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null)).getActor());
 
         targetEnc.send(new Message(sender, "msg"));
         target.send(new Message(sender,"hola que tal"));
@@ -169,5 +171,23 @@ public class Tests {
         Instant end = Instant.now();
         Duration timeElapsed = Duration.between(start,end);
         System.out.println((Float.valueOf(timeElapsed.getNano()) / 1000000.0) + " milisegundos");
+    }
+
+    @Test
+    public void testObserver(){
+        Observer o = new MonitorService();
+        ActorProxy ping1 = ActorContext.spawnActor(new PingPongActor("PingPong 1"));
+        ActorProxy ping2 = ActorContext.spawnActor(new PingPongActor("PingPong 2"));
+        ping2.getPingPongActor().setPareja(ping1.getPingPongActor());
+        ping1.getPingPongActor().setPareja(ping2.getPingPongActor());
+        ping2.subscrib(o);
+        ping1.subscrib(o);
+        ping2.send(new Message(ping1,"Hola que tal?"));
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

@@ -3,7 +3,7 @@ package Model;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
-public class ActorDecorator implements ActorInterface{
+public class ActorDecorator{
     ActorInterface actor;
 
     /**
@@ -20,7 +20,6 @@ public class ActorDecorator implements ActorInterface{
      *
      * @param message
      */
-    @Override
     public void send(MessageInterface message) {
         actor.send(message);
     }
@@ -28,7 +27,6 @@ public class ActorDecorator implements ActorInterface{
     /**
      * @return Model.Message queue from the actor inside the Object
      */
-    @Override
     public LinkedBlockingQueue<MessageInterface> getQueueMsg() {
         return actor.getQueueMsg();
     }
@@ -44,20 +42,17 @@ public class ActorDecorator implements ActorInterface{
     }
 
 
-    @Override
     public String getName() {
-        return null;
+        return actor.getName();
     }
 
-    @Override
     public int getMsg() {
-        return 0;
+        return actor.getMsg();
     }
 
     /**
      * Thread method, process every msg from the queue
      */
-    @Override
     public void run() {
         while(true){
             try {
@@ -66,5 +61,28 @@ public class ActorDecorator implements ActorInterface{
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return actor.toString();
+    }
+
+    /**
+     * @param o
+     */
+    public void subscrib(Observer o) {
+        actor.subscrib(o);
+    }
+
+    /**
+     * @param o
+     */
+    public void unsub(Observer o) {
+        actor.unsub(o);
+    }
+
+    public ActorInterface getActor() {
+        return actor;
     }
 }

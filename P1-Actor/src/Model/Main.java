@@ -36,13 +36,13 @@ public class Main {
 
         /**PARTE 3**/
 
-        ActorProxy sender = ActorContext.spawnActor(new FirewallDecorator(new EncryptionDecorator(new Actor("a"))));
-        ActorProxy target = ActorContext.spawnActor(new FirewallDecorator(new Actor("b"))); // new Model.EncryptionDecorator()
-        ActorProxy target3 = ActorContext.spawnActor(new EncryptionDecorator(new Actor("f")));
-        ActorProxy target1 = ActorContext.spawnActor(new EncryptionDecorator(new FirewallDecorator(new Actor("c"))));
-        ActorProxy target2 = ActorContext.spawnActor(new FirewallDecorator(new Actor("d")));
-        ProxyClient proxy = ActorContext.spawnProxy(new FirewallDecorator(new Actor("e")));
-        ActorProxy lambaDecorator = ActorContext.spawnActor(new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null));
+        ActorProxy sender = ActorContext.spawnActor((new FirewallDecorator((new EncryptionDecorator(new Actor("a"))).getActor())).getActor());
+        ActorProxy target = ActorContext.spawnActor((new FirewallDecorator(new Actor("b"))).getActor()); // new Model.EncryptionDecorator()
+        ActorProxy target3 = ActorContext.spawnActor((new EncryptionDecorator(new Actor("f"))).getActor());
+        ActorProxy target1 = ActorContext.spawnActor((new EncryptionDecorator((new FirewallDecorator(new Actor("c"))).getActor())).getActor());
+        ActorProxy target2 = ActorContext.spawnActor((new FirewallDecorator(new Actor("d"))).getActor());
+        ProxyClient proxy = ActorContext.spawnProxy((new FirewallDecorator(new Actor("e"))).getActor());
+        ActorProxy lambaDecorator = ActorContext.spawnActor((new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null)).getActor());
 
         //target.send(new Model.Message(sender, "hola que tal"));
         //target3.send(new Model.Message(sender, "hola que tal dos"));
