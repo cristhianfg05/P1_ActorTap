@@ -2,10 +2,15 @@ package Controlador;
 
 import Model.*;
 
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+
 public class Controller {
 
     public Controller(){}
 
+    /**CREACIONES PARA LAS SIMULACIONES VISTA 1**/
     ActorContext ac = ActorContext.getInstance();
     ActorProxy targetEnc = ActorContext.spawnActor((new EncryptionDecorator(new Actor("enc"))).getActor());
     ActorProxy sender = ActorContext.spawnActor((new FirewallDecorator((new EncryptionDecorator(new Actor("a"))).getActor())).getActor());
@@ -13,6 +18,7 @@ public class Controller {
     ActorProxy target1 = ActorContext.spawnActor((new EncryptionDecorator((new FirewallDecorator(new Actor("c"))).getActor())).getActor());
     ActorProxy target2 = ActorContext.spawnActor((new FirewallDecorator(new Actor("d"))).getActor());
     ActorProxy lambaDecorator = ActorContext.spawnActor((new LambdaFirewallDecorator(new Actor("f"), x -> x.getMsg() != null)).getActor());
+
     public void simulacio1(String msg, String tipus){
         switch(tipus){
             case "RingActor":
@@ -65,4 +71,6 @@ public class Controller {
             lambaDecorator.send(new Message(target2,msg));
         }
     }
+
+
 }

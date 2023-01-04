@@ -70,8 +70,8 @@ public class ActorContext extends Thread{
      *
      * @return if exists
      */
-    public boolean lookup(String name){
-        return map.containsKey(name);
+    public ActorInterface lookup(String name){
+        return map.get(name);
     }
 
     /**
