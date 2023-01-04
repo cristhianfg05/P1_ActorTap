@@ -78,7 +78,7 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         }else{
             ActorInterface rec = message.getReciever();
             for (MessageInterface m : InsultList) {
-                rec.send(m);
+                rec.send(new Message(null, m.getMsg()));
             }
         }
     }

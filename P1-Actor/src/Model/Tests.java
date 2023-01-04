@@ -69,7 +69,12 @@ public class Tests {
         insult.send(new AddInsultMessage(insult, "CR7 enjoyer3"));
         insult.send(new AddInsultMessage(insult, "noob3"));
         insult.send(new GetInsultMessage(insult, ""));
+        insult.send(new GetAllInsultsMessage(insult, ""));
         MessageInterface result = insult.recieve();
+        System.out.println(result.getMsg());
+        result = insult.recieve();
+        System.out.println(result.getMsg());
+        result = insult.recieve();
         System.out.println(result.getMsg());
     }
 
