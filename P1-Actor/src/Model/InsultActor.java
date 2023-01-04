@@ -68,7 +68,7 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
     @Override
     public void process(MessageInterface message) throws InterruptedException {
         if(message instanceof Message){
-            System.out.println(this.queueInsultMsg.take());
+            System.out.println(message);
         }else if(message instanceof GetInsultMessage){
             int rnd = new Random().nextInt(InsultList.size());
             System.out.println("HE LLEGADO, EL RANDOM ES "+rnd);
@@ -76,8 +76,9 @@ public class InsultActor implements  ActorInterface, Runnable, InsultService{
         }else if(message instanceof AddInsultMessage){
             InsultList.add(message);
         }else{
+            ActorInterface rec = message.getReciever();
             for (MessageInterface m : InsultList) {
-                send(m);
+                rec.send(m);
             }
         }
     }
