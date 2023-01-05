@@ -2,6 +2,7 @@ package Vista;
 
 import Controlador.Controller;
 import Controlador.ControllerView2;
+import Model.ActorInterface;
 
 import javax.swing.*;
 import java.awt.*;
@@ -154,19 +155,21 @@ public class VistaP2 extends javax.swing.JFrame {
 
         buttonGroup3.add(RadioMsg);
         RadioMsg.setText("Message");
-        RadioMsg.setActionCommand("");
+        RadioMsg.setActionCommand("Message");
 
         buttonGroup3.add(RadioAddInsultMsg);
         RadioAddInsultMsg.setText("AddInsultMessage");
-        RadioAddInsultMsg.setActionCommand("");
+        RadioAddInsultMsg.setActionCommand("AddInsultMessage");
 
         buttonGroup3.add(RadioGetInsultMsg);
         RadioGetInsultMsg.setText("GetInsultMessage");
+        RadioGetInsultMsg.setActionCommand("GetInsultMessage");
 
         jLabel6.setText("Tipo de mensaje");
 
         buttonGroup3.add(RadioGetAllInsult);
         RadioGetAllInsult.setText("GetAllInsult");
+        RadioGetAllInsult.setActionCommand("GetAllInsult");
 
         BtSendMsg.setText("Enviar");
         BtSendMsg.addActionListener(new java.awt.event.ActionListener() {
@@ -181,6 +184,7 @@ public class VistaP2 extends javax.swing.JFrame {
 
         buttonGroup3.add(RadioPredicate);
         RadioPredicate.setText("AddClosureMessage");
+        RadioPredicate.setActionCommand("AddClosureMessage");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -372,7 +376,11 @@ public class VistaP2 extends javax.swing.JFrame {
     }
 
     private void BtSendMsgActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        System.out.println("Seleccione de la lista el actor que quiere recibir un mensaje");
+        if(buttonGroup3.getSelection() != null && ListaActores.getSelectedValue() != null){
+            String name = ListaActores.getSelectedValue().split(" ")[0];
+            c.enviarMensaje(name, Message.getText(),buttonGroup3.getSelection().getActionCommand());
+        }else System.out.println("Seleccione un radio button y seleccione un elemento de la lista");
     }
 
     /**

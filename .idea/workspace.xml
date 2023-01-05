@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Controlador/ControllerView2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P1-Actor/src/Vista/VistaP2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Controlador/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Controlador/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/ActorContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ActorContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Controlador/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Controlador/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Controlador/ControllerView2.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Controlador/ControllerView2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/RingActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Vista/VistaP2.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Vista/VistaP2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Controlador/ControllerView2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Controlador/ControllerView2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/RingActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Vista/VistaP2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,14 +74,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VistaP2">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Model.Main" />
-      <module name="P1_ActorTap" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Vista">
     <configuration name="Vista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Vista.Vista" />
       <module name="P1_ActorTap" />
@@ -129,11 +128,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Vista" />
         <item itemvalue="Application.VistaP2" />
         <item itemvalue="JUnit.Tests" />
         <item itemvalue="JUnit.Tests.testObserver" />
-        <item itemvalue="Application.Vista" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

@@ -54,7 +54,7 @@ public class RingActor implements ActorInterface, Runnable, Publisher {
             num_vueltas++;
             numMsg++;
             notifySub(Actions.SEND);
-            if (this.nextActor != null && this.nextActor.num_vueltas < 1) {
+            if (this.nextActor != null && this.nextActor.num_vueltas < 100) {
                 this.nextActor.send(message);
             } else this.nextActor.send(new QuitMessage());
         } else {
