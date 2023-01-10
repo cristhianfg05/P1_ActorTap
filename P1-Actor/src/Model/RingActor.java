@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class RingActor implements ActorInterface, Runnable, Publisher {
+public class RingActor implements ActorInterface {
 
 
     private LinkedBlockingQueue<MessageInterface> queueMsg;

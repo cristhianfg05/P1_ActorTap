@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class PingPongActor implements ActorInterface, Runnable, Publisher {
+public class PingPongActor implements ActorInterface {
     private LinkedBlockingQueue<MessageInterface> queueMsg;
     private int num_vueltas;
     private String name;

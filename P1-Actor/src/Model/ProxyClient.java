@@ -2,7 +2,7 @@ package Model;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class ProxyClient implements ActorInterface, Runnable{
+public class ProxyClient implements ActorInterface{
     private LinkedBlockingQueue<MessageInterface> queueMsg;
     private ActorInterface actor;
 

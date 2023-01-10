@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class InsultActor implements  ActorInterface, Runnable, InsultService{
+public class InsultActor implements  ActorInterface, InsultService{
 
     private LinkedBlockingQueue<MessageInterface> queueInsultMsg;
     private ArrayList<MessageInterface> InsultList;

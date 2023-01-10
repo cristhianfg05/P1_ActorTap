@@ -126,6 +126,7 @@ public class VistaP2 extends javax.swing.JFrame {
             }
         });
 
+
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setText("Creador de actores");
 
