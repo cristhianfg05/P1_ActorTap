@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7cd2d940-1311-4553-a2dd-21914ed30e87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/InsultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/InsultActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/PingPongActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/PingPongActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/ProxyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/ProxyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Model/RingActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Model/RingActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P1-Actor/src/Vista/VistaP2.java" beforeDir="false" afterPath="$PROJECT_DIR$/P1-Actor/src/Vista/VistaP2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/InsultActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/InsultActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/PingPongActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/PingPongActor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/ProxyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/ProxyClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/RingActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/P1_ActorTap/Model/RingActor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Tests.testPingPong">
+  <component name="RunManager" selected="Application.VistaP2">
     <configuration name="Vista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Vista.Vista" />
       <module name="P1_ActorTap" />
@@ -95,15 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="P1_ActorTap" />
-      <option name="PACKAGE_NAME" value="Model" />
-      <option name="MAIN_CLASS_NAME" value="Model.Tests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests.testParte2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P1_ActorTap" />
       <extension name="coverage">
@@ -115,6 +105,22 @@
       <option name="PACKAGE_NAME" value="Model" />
       <option name="MAIN_CLASS_NAME" value="Model.Tests" />
       <option name="METHOD_NAME" value="testParte2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.testParte4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P1_ActorTap" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model" />
+      <option name="MAIN_CLASS_NAME" value="Model.Tests" />
+      <option name="METHOD_NAME" value="testParte4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Tests.testPingPong" />
         <item itemvalue="Application.VistaP2" />
-        <item itemvalue="JUnit.Tests.testParte2" />
-        <item itemvalue="JUnit.Tests" />
         <item itemvalue="Application.Vista" />
+        <item itemvalue="JUnit.Tests.testParte4" />
+        <item itemvalue="JUnit.Tests.testPingPong" />
+        <item itemvalue="JUnit.Tests.testParte2" />
       </list>
     </recent_temporary>
   </component>
